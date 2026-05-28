@@ -2,26 +2,24 @@
 
 ## Arrays
 - [ ] Delete the minimum or maximum element from an array.
+- [x] Find the minimum or maximum element from an array.
 - [ ] Insert a row and a column.
-- [ ] Find the largest and smallest elements.
-- [ ] Reverse each row and each column in a matrix.
+- [ ] 
 
----
 ## Strings
 - [ ] Palindrome string.
 - [ ] Anagram string.
 - [ ] Character frequency.
 - [ ] Reverse words in a string.
-- [ ] Count vowels and consonants.
+- [x] Count vowels and consonants.
 
----
 ## Matrix
 - [ ] Sum of boundary elements.
+- [ ] Reverse each row and each column in a matrix.
 - [ ] Find the row with maximum sum and discard it.
 - [ ] Rotate a matrix by 90 degrees.
 - [ ] Sum of diagonal elements.
 
----
 ## Algorithms
 - [ ] Sliding window.
 - [ ] Two pointers.
