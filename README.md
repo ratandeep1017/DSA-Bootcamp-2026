@@ -4,7 +4,6 @@
 - [ ] Delete the minimum or maximum element from an array.
 - [x] Find the minimum or maximum element from an array.
 - [ ] Insert a row and a column.
-- [ ] 
 
 ## Strings
 - [ ] Palindrome string.
