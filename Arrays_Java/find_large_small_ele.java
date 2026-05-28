@@ -1,4 +1,3 @@
-// package Arrays_Java;
 import java.util.*;
 public class find_large_small_ele {
     public static void main(String[] args){
