@@ -1,29 +1,34 @@
 # DSA-Bootcamp-2026
 
-#### Arrays
-- [x] Count vowels and consonants.
-- [ ] Find the row with maximum sum and discard it.
+## Arrays
+- [ ] Delete the minimum or maximum element from an array.
 - [ ] Insert a row and a column.
-- [x] Find the largest and smallest elements.
+- [ ] Find the largest and smallest elements.
 - [ ] Reverse each row and each column in a matrix.
 
-#### Strings
-- [ ] String problems and practice.
+---
+## Strings
 - [ ] Palindrome string.
 - [ ] Anagram string.
 - [ ] Character frequency.
 - [ ] Reverse words in a string.
+- [ ] Count vowels and consonants.
 
-#### Matrix
+---
+## Matrix
 - [ ] Sum of boundary elements.
-- [ ] Delete the minimum or maximum element from an array.
+- [ ] Find the row with maximum sum and discard it.
 - [ ] Rotate a matrix by 90 degrees.
-- [ ] Prefix sum.
-- [ ] Bit manipulation.
-- [ ] Hashing.
+- [ ] Sum of diagonal elements.
+
+---
+## Algorithms
 - [ ] Sliding window.
 - [ ] Two pointers.
+- [ ] Prefix sum.
+- [ ] Frequency count using a map or hashing.
+- [ ] Bit manipulation.
+- [ ] Hashing.
 - [ ] Kadane’s algorithm.
 - [ ] Dutch National Flag algorithm.
-- [ ] Frequency count using a map or hashing.
 
