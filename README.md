@@ -12,6 +12,11 @@
 This repository is used for daily DSA practice, topic-wise coding, and concept revision.  
 For now it includes problem-solving practice across arrays, strings, matrices, and common algorithm patterns.
 
+>NeetCode150 Sheet : https://neetcode.io/practice/practice/neetcode150
+
+>Striver DSA Sheet :  https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems
+
+
 
 ## Progress Tracker
 
