@@ -34,11 +34,13 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Spiral Traversal Of Matrix
 
 ### 🔵Strings
-- [x] Count vowels and consonants
-- [ ] Palindrome string.
-- [ ] Anagram string.
-- [ ] Character frequency.
-- [ ] Reverse words in a string.
+- [x] Count vowels or consonants
+- [ ] Remove vowels or consonants
+- [ ] Split the string into array while removing spaces
+- [ ] Palindrome string
+- [ ] Anagram string
+- [ ] Character frequency
+- [ ] Reverse words in a string
 - [ ] Remove Duplicate Characters
 - [ ] Find First Non Repeating Character
 - [ ] Check if Two Strings are ANAGRRAM or not 
@@ -50,6 +52,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Longest Substring without Repeating Character
 - [ ] Minimum Window Substring
 - [ ] Valid Parenthesis check by String or using Stack
+- [ ] find a pattern and replace it with specific Character
 
 ### 🔴Algorithms
 - [ ] Sliding window.
