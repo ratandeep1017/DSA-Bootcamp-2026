@@ -55,6 +55,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 ### 🔴Algorithms
 - [ ] Sliding window.
 - [ ] Two pointers.
+- [ ] Binary search
 - [ ] Prefix sum.
 - [ ] Frequency count using a map or hashing.
 - [ ] Bit manipulation.
