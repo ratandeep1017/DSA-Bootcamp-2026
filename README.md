@@ -16,8 +16,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 ## Progress Tracker
 
 ### 🟢Arrays
-- [x] Find the minimum or maximum element from an array
-- [ ] Delete the minimum or maximum element from an array.
+- [x] Find/Delete the min/max element from an array
 - [ ] Insert a row and a column.
 - [ ] Leaders in the array
 - [ ] Longest Consecutive Increasing Subarray
