@@ -13,8 +13,6 @@ This repository is used for daily DSA practice, topic-wise coding, and concept r
 For now it includes problem-solving practice across arrays, strings, matrices, and common algorithm patterns.
 
 
-
-
 ## Progress Tracker
 
 ### 🟢Arrays
