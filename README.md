@@ -16,16 +16,27 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 ## Progress Tracker
 
 ### 🟢Arrays
+- [x] **Find the minimum or maximum element from an array**
 - [ ] Delete the minimum or maximum element from an array.
-- [x] Find the minimum or maximum element from an array.
 - [ ] Insert a row and a column.
 
 ### 🔵Strings
+- [x] **Count vowels and consonants**
 - [ ] Palindrome string.
 - [ ] Anagram string.
 - [ ] Character frequency.
 - [ ] Reverse words in a string.
-- [x] Count vowels and consonants.
+- [ ] Remove Duplicate Characters
+- [ ] Find First Non Repeating Character
+- [ ] Check if Two Strings are ANAGRRAM or not 
+- [ ] Group Anagrams
+- [ ] Longest Common Prefix
+- [ ] Longest Common Subsequence
+- [ ] Longest Palindromic Subsequence
+- [ ] String Compression
+- [ ] Longest Substring without Repeating Character
+- [ ] Minimum Window Substring
+- [ ] Valid Parenthesis check by String or using Stack
 
 ### 🟣Matrix
 - [ ] Sum of boundary elements.
@@ -44,6 +55,11 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Kadane’s algorithm.
 - [ ] Dutch National Flag algorithm.
 
+### Advanced Algorithms
+- [ ] Shortest palindrome
+- [ ] Z-Algo
+- [ ] Rabin-Karp -> A string-searching algorithm
+- [ ] The KMP matching algorithm 
 
 ---
 
