@@ -32,15 +32,15 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 
 ### 🔵Strings
 - [x] Count vowels or consonants
-- [ ] Remove vowels or consonants
-- [ ] Split the string into array while removing spaces
-- [ ] Palindrome string
-- [ ] Anagram string
-- [ ] Character frequency
+- [x] Remove vowels or consonants
+- [x] Split the string into array while removing spaces
+- [x] Palindrome string
 - [ ] Reverse words in a string
+- [ ] Every Character frequency
 - [ ] Remove Duplicate Characters
 - [ ] Find First Non Repeating Character
 - [ ] Check if Two Strings are ANAGRRAM or not 
+- [ ] Anagram strings
 - [ ] Group Anagrams
 - [ ] Longest Common Prefix
 - [ ] Longest Common Subsequence
