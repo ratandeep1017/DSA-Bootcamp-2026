@@ -23,8 +23,6 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Longest Consecutive Increasing Subarray
 - [ ] Sort 0s, 1s, 2s
 
-
-
 ### 🟣Matrix
 - [ ] Sum of boundary elements.
 - [ ] Reverse each row and each column in a matrix.
@@ -61,7 +59,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Kadane’s algorithm.
 - [ ] (DNFS) - Dutch National Flag algorithm.
 
-### Advanced Algorithms
+### 🟠Advanced Algorithms
 - [ ] Shortest palindrome
 - [ ] Z-Algo
 - [ ] Rabin-Karp -> A string-searching algorithm
