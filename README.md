@@ -16,12 +16,25 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 ## Progress Tracker
 
 ### 🟢Arrays
-- [x] **Find the minimum or maximum element from an array**
+- [x] Find the minimum or maximum element from an array
 - [ ] Delete the minimum or maximum element from an array.
 - [ ] Insert a row and a column.
+- [ ] Leaders in the array
+- [ ] Longest Consecutive Increasing Subarray
+- [ ] Sort 0s, 1s, 2s
+
+
+
+### 🟣Matrix
+- [ ] Sum of boundary elements.
+- [ ] Reverse each row and each column in a matrix.
+- [ ] Find the row with maximum sum and discard it.
+- [ ] Rotate a matrix by 90 degrees and by 'n' times
+- [ ] Sum and difference of diagonal elements.
+- [ ] Spiral Traversal Of Matrix
 
 ### 🔵Strings
-- [x] **Count vowels and consonants**
+- [x] Count vowels and consonants
 - [ ] Palindrome string.
 - [ ] Anagram string.
 - [ ] Character frequency.
@@ -38,13 +51,6 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Minimum Window Substring
 - [ ] Valid Parenthesis check by String or using Stack
 
-### 🟣Matrix
-- [ ] Sum of boundary elements.
-- [ ] Reverse each row and each column in a matrix.
-- [ ] Find the row with maximum sum and discard it.
-- [ ] Rotate a matrix by 90 degrees.
-- [ ] Sum of diagonal elements.
-
 ### 🔴Algorithms
 - [ ] Sliding window.
 - [ ] Two pointers.
@@ -53,26 +59,23 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Bit manipulation.
 - [ ] Hashing.
 - [ ] Kadane’s algorithm.
-- [ ] Dutch National Flag algorithm.
+- [ ] (DNFS) - Dutch National Flag algorithm.
 
 ### Advanced Algorithms
 - [ ] Shortest palindrome
 - [ ] Z-Algo
 - [ ] Rabin-Karp -> A string-searching algorithm
 - [ ] The KMP matching algorithm 
+- [ ] Frequency Sort
 
 ---
 
 ## How to Use
-1. Clone the repository.
-2. Open the topic folder you want to practice.
-3. Read the code, run it, and modify it for your own learning.
-4. Mark topics as completed in the checklist.
-
-## Notes
 - Each folder contains topic-wise practice problems.
 - Code is written mainly for learning and revision.
 - The checklist helps track completed and pending topics.
-
-## License
-This repository is for personal learning and practice.
+  1. Clone the repository.
+  2. Open the topic folder you want to practice.
+  3. Read the code, run it, and modify it for your own learning.
+  4. Mark topics as completed in the checklist. 
+- **License** : This repository is for personal learning and practice.
