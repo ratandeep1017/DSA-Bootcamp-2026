@@ -24,9 +24,9 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 
 ### 🟣Matrix
 - [x] Sum of diagonal elements.
+- [x] Find the row with Maximum/Minimum sum and discard it.
 - [ ] Sum of boundary elements.
 - [ ] Reverse each row and each column in a matrix.
-- [x] Find the row with Maximum/Minimum sum and discard it.
 - [ ] Rotate a matrix by 90 degrees and by 'n' times
 - [ ] Spiral Traversal Of Matrix
 
