@@ -27,7 +27,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Reverse each row and each column in a matrix.
 - [ ] Find the row with maximum sum and discard it.
 - [ ] Rotate a matrix by 90 degrees and by 'n' times
-- [ ] Sum and difference of diagonal elements.
+- [x] Sum and difference of diagonal elements.
 - [ ] Spiral Traversal Of Matrix
 
 ### 🔵Strings
