@@ -23,11 +23,11 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Sort 0s, 1s, 2s
 
 ### 🟣Matrix
+- [x] Sum of diagonal elements.
 - [ ] Sum of boundary elements.
 - [ ] Reverse each row and each column in a matrix.
-- [ ] Find the row with maximum sum and discard it.
+- [x] Find the row with maximum sum and discard it.
 - [ ] Rotate a matrix by 90 degrees and by 'n' times
-- [x] Sum and difference of diagonal elements.
 - [ ] Spiral Traversal Of Matrix
 
 ### 🔵Strings
