@@ -36,6 +36,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [x] Split the string into array while removing spaces
 - [x] Palindrome string
 - [ ] Reverse words in a string
+- [ ] Reverse Characters in a string
 - [ ] Every Character frequency
 - [ ] Remove Duplicate Characters
 - [ ] Find First Non Repeating Character
