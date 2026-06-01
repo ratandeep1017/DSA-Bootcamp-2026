@@ -37,12 +37,13 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [x] Palindrome string
 - [x] Find First Non Repeating Character
 - [x] Find all permutations of a string (abc) - (abc,acb,bac,cab,...)
+- [x] String Compression
+- [x] String Expansion
+- [x] Reverse Characters in a string
 - [ ] Reverse words in a string
-- [ ] Reverse Characters in a string
 - [ ] Every Character frequency
 - [ ] Remove Duplicate Characters
 - [ ] Reverse Characters in a string from a specific character
-- [ ] String Compression
 - [ ] Check if Two Strings are ANAGRRAM or not 
 - [ ] Anagram strings
 - [ ] Group Anagrams
