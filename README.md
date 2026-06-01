@@ -41,7 +41,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Remove Duplicate Characters
 - [ ] Find First Non Repeating Character
 - [ ] Reverse Characters in a string from a specific character
-- [ ] Find all permutations of a string (abc) - (abc,acb,bac,cab . . . )
+- [ ] Find all permutations of a string (abc) - (abc,acb,bac,cab,...)
 - [ ] String Compression
 - [ ] Check if Two Strings are ANAGRRAM or not 
 - [ ] Anagram strings
