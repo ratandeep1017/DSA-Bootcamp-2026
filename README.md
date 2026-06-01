@@ -40,13 +40,15 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Every Character frequency
 - [ ] Remove Duplicate Characters
 - [ ] Find First Non Repeating Character
+- [ ] Reverse Characters in a string from a specific character
+- [ ] Find all permutations of a string (abc) - (abc,acb,bac,cab . . . )
+- [ ] String Compression
 - [ ] Check if Two Strings are ANAGRRAM or not 
 - [ ] Anagram strings
 - [ ] Group Anagrams
 - [ ] Longest Common Prefix
 - [ ] Longest Common Subsequence
 - [ ] Longest Palindromic Subsequence
-- [ ] String Compression
 - [ ] Longest Substring without Repeating Character
 - [ ] Minimum Window Substring
 - [ ] Valid Parenthesis check by String or using Stack
