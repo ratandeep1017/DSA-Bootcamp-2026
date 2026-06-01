@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Hello {
+public class find_first_unique_char {
 
     public static char nonRep(String s, int n) {
         for (int i=0; i<n; i++) {
@@ -11,7 +11,7 @@ public class Hello {
             }
             if (!found) return s.charAt(i);
         }
-        return '$';
+        return ' ';
     }
 
     public static void main(String[] args) {
