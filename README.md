@@ -35,13 +35,13 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [x] Remove vowels or consonants
 - [x] Split the string into array while removing spaces
 - [x] Palindrome string
+- [x] Find First Non Repeating Character
+- [x] Find all permutations of a string (abc) - (abc,acb,bac,cab,...)
 - [ ] Reverse words in a string
 - [ ] Reverse Characters in a string
 - [ ] Every Character frequency
 - [ ] Remove Duplicate Characters
-- [ ] Find First Non Repeating Character
 - [ ] Reverse Characters in a string from a specific character
-- [ ] Find all permutations of a string (abc) - (abc,acb,bac,cab,...)
 - [ ] String Compression
 - [ ] Check if Two Strings are ANAGRRAM or not 
 - [ ] Anagram strings
