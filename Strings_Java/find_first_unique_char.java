@@ -9,7 +9,7 @@ public class find_first_unique_char {
                     found = true; break;
                 }
             }
-            if (!found) return s.charAt(i);
+            if (!found) return s.charAt(i);  
         }
         return ' ';
     }
@@ -17,6 +17,8 @@ public class find_first_unique_char {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-        System.out.println(nonRep(str , str.length()));
+        char ch = nonRep(str , str.length());
+        if(ch != ' ') System.out.println(ch);
+        else System.out.println(-1);
     }
 }
