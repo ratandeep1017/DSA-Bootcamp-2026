@@ -40,7 +40,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [x] String Compression
 - [x] String Expansion
 - [x] Reverse Characters in a string
-- [ ] Reverse words in a string
+- [x] Reverse words in a string
 - [ ] Every Character frequency
 - [ ] Remove Duplicate Characters
 - [ ] Reverse Characters in a string from a specific character
