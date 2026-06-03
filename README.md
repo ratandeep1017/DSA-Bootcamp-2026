@@ -9,7 +9,7 @@
 </p>
 
 ## About
-This repository is used for daily DSA practice, topic-wise coding, and concept revision.  
+This repository is used for daily DSA practice questions, topic-wise coding, and concept revision.  
 For now it includes problem-solving practice across arrays, strings, matrices, and common algorithm patterns.
 
 
@@ -40,7 +40,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [x] String Compression
 - [x] String Expansion
 - [x] Reverse Characters in a string
-- [ ] Reverse words in a string
+- [x] Reverse words in a string
 - [ ] Every Character frequency
 - [ ] Remove Duplicate Characters
 - [ ] Reverse Characters in a string from a specific character
