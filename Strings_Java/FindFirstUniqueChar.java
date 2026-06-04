@@ -19,6 +19,7 @@ public class FindFirstUniqueChar {
         String str = sc.nextLine();
         char ch = nonRep(str , str.length());
         if(ch != ' ') System.out.println(ch);
-        else System.out.println(-1);
+        else System.out.println("No non-repeating character found");
+        //else System.out.println(-1);
     }
 }
