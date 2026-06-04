@@ -3,7 +3,6 @@ import java.util.Stack;
 public class Main {
     public static void reverseWords(String str) {
         Stack<Character> stack = new Stack<>();
-
         for (char ch : str.toCharArray()) {
             if (ch != ' ') stack.push(ch);
              else { 
