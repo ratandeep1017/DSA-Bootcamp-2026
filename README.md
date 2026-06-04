@@ -66,11 +66,11 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [x] ReverseEvenThenOdd
 
 
-## 🟤Stack
+### 🟤Stack
 - [x] Reverse the String as : "Hello World" -> "olleH dlroW"
 - [ ] User Choice based "Push pop and peek" opearions
 
-## ⚫Queue
+### ⚫Queue
 - [x] sum of all the elements with when Enqued and Dequed operations
 
 
