@@ -66,14 +66,31 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 
 
 ### 🟤Stack
+- [ ] Stack using Array and LinkedList
 - [x] Reverse the String as : "Hello World" -> "olleH dlroW"
 - [ ] User Choice based "Push pop and peek" opearions
+- [ ] Valid Parenthesis check using stack
+- [ ] Infix prefix postfix - conversion and implementation
+- [ ] Postfix Evaluation
+- [ ] Min Stack Problem
+- [ ] QUEUE using STACK
+- [ ] Sort elements in stack using a STACK
+- [ ] Delete middle element of stack
+- [ ] implement two stacks in a single array (using two pointer)
+- [ ] N-Stacks Implementation
+
 
 ### ⚫Queue
+- [ ] Queue using Array and LinkedList
+- [ ] Circular Queue using Array and LinkedList
 - [x] sum of all the elements with when Enqued and Dequed operations
+- [ ] STACK using QUEUE
+- [ ] Generate binary numbers from (1 to n) using queue
+- [ ] reverse 1st k elements in a queue
 
 
-### 🔴Algorithms
+
+### 🔴Algorithms + RANDOM - DS(Unknown)
 - [ ] Sliding window.
 - [ ] Two pointers.
 - [ ] Binary search
@@ -83,6 +100,16 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Hashing.
 - [ ] Kadane’s algorithm.
 - [ ] (DNFS) - Dutch National Flag algorithm.
+- [ ] Next Greater Element
+- [ ] Stock Span Problem
+- [ ] Sliding window maximum
+- [ ] First negative in a window 
+- [ ] The celebrity problem
+- [ ] Largest Rectangle in Histogram
+- [ ] Trapping Rain Water
+- [ ] 
+
+
 
 ### 🟠Advanced Algorithms
 - [ ] Shortest palindrome
@@ -90,6 +117,8 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Rabin-Karp -> A string-searching algorithm
 - [ ] The KMP matching algorithm 
 - [ ] Frequency Sort
+
+
 
 ---
 
