@@ -6,14 +6,12 @@ public class Main {
 
         for (char ch : str.toCharArray()) {
             if (ch != ' ') stack.push(ch);
-             else {
-                // Print current word in reverse
-                while (!stack.isEmpty()) 
-                    System.out.print(stack.pop());
+             else { 
+                while (!stack.isEmpty()) System.out.print(stack.pop());
                 System.out.print(" ");
             }
         }
-        while (!stack.isEmpty()) System.out.print(stack.pop());
+       while (!stack.isEmpty())System.out.print(stack.pop());
     }
 
     public static void main(String[] args) {

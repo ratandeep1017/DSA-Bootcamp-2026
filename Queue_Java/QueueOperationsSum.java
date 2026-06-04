@@ -61,7 +61,6 @@ public class Main {
         q.enqueue(20);
         q.enqueue(30);
         q.dequeue();
-        q.display(); 
         System.out.println("Sum = " + q.getSum()); // 60
     }
 }
