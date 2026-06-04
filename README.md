@@ -55,6 +55,14 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Valid Parenthesis check by String or using Stack
 - [ ] find a pattern and replace it with specific Character
 
+## 🔴Stack
+- [ ] Reverse the String as : "Hello World" -> "olleH dlroW"
+- [ ] User Choice based "Push pop and peek" opearions
+
+## 🔴Queue
+- [ ] sum of all the elements with when Enqued and Dequed operations
+
+
 ### 🔴Algorithms
 - [ ] Sliding window.
 - [ ] Two pointers.
