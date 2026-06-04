@@ -10,14 +10,12 @@ class OddSumOfDigits{
      
      for(int i=0; i<n ; i++) {
          int num = nums.get(i);
-         if(num<10 && num%2!=0) 
-             System.out.print(num);
-             
-        else{
-         int rem = num/10;
-         int quot = num%10;
-         if((rem+quot)%2!=0) System.out.print(num);
-     }
-     }
+         if(num<10 && num%2!=0) System.out.print(num);
+         else{
+            int rem = num/10;
+            int quot = num%10;
+            if((rem+quot)%2!=0) System.out.print(num);
+        }
+      }
     }
 }
