@@ -55,12 +55,23 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Valid Parenthesis check by String or using Stack
 - [ ] find a pattern and replace it with specific Character
 
-## 🔴Stack
-- [ ] Reverse the String as : "Hello World" -> "olleH dlroW"
+### 🟡ArrayList Questions
+- [x] CheckPrefixRemoveElement
+- [x] CountElements
+- [x] DeleteAtIndex
+- [x] OddSumOfDigits
+- [x] RemovingDuplicateFromBack
+- [x] ReplaceValueAtIndex
+- [x] Reverse
+- [x] ReverseEvenThenOdd
+
+
+## 🟤Stack
+- [x] Reverse the String as : "Hello World" -> "olleH dlroW"
 - [ ] User Choice based "Push pop and peek" opearions
 
-## 🔴Queue
-- [ ] sum of all the elements with when Enqued and Dequed operations
+## ⚫Queue
+- [x] sum of all the elements with when Enqued and Dequed operations
 
 
 ### 🔴Algorithms
@@ -102,3 +113,8 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 >STRIVER DSA Sheet :  https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems
 
 > Solution in JAVA - STRIVER DSA Sheet: https://github.com/ashutosh11019/Strivers-A2Z-DSA-Course-Sheet
+
+>Colored Emogies : 
+ 🔘🔴🟡🟢🔵🟣🟤⚫🟠🔴⚪
+ 🟥🟧🟨🟩🟦🟪🟫⬛⬜
+ 🔶🔸🔷🔹🔺🔻
