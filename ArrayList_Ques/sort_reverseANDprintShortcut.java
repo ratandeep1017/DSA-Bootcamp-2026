@@ -23,7 +23,8 @@ public class sort_reverseANDprintShortcut {
         numbers.sort(Comparator.reverseOrder()); // reverse order
         System.out.println(numbers);
 
-        names.forEach(item -> System.out.println(item));
+        names.forEach(item -> System.out.print(item + " "));
+        System.out.println();
         numbers.forEach(System.out::println);
 
     }
