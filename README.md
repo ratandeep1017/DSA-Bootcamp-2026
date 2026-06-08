@@ -88,7 +88,12 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Generate binary numbers from (1 to n) using queue
 - [ ] reverse 1st k elements in a queue
 
-
+### Searching and Sorting
+- [ ]
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
 
 ### 🔴Algorithms + RANDOM - DS(Unknown)
 - [ ] Sliding window.
