@@ -112,7 +112,6 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] The celebrity problem
 - [ ] Largest Rectangle in Histogram
 - [ ] Trapping Rain Water
-- [ ] 
 
 
 
