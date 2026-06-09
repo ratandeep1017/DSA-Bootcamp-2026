@@ -118,9 +118,13 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 ## Searching and Sorting
 - [ ] Linear Search
 - [ ] Binary Search
-- [ ] 
-- [ ] 
-- [ ] 
+- [ ] Comparison of **Sorting** Algorithms
+  - [ ] Insertion  
+  - [ ] Selection  
+  - [ ] Bubble   
+  - [ ] Heap   
+  - [ ] **Sorting in Linear Time:** Counting and Bucket Sort
+  - [ ] **Divide and Conquer Sorting:** Merge and Quick Sort  
 
 ## 🔴Algorithms + RANDOM - DS(Unknown)
 - [ ] Sliding window.
