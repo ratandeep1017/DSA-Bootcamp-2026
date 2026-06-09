@@ -18,7 +18,7 @@ public class sort_reverseANDprintShortcut {
         numbers.add(11);
         numbers.add(33);
 
-        numbers.sort(null); // natural order → [Alice, Bob, John]
+        numbers.sort(null); 
         System.out.println(numbers);
         numbers.sort(Comparator.reverseOrder()); // reverse order
         System.out.println(numbers);
