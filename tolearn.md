@@ -1,6 +1,4 @@
-ok. now tell me what else cool  packages are present in java . similar to array list which can help me solve dsa questions
-
-Yes! Java has a **very powerful Collections framework** in `java.util` that gives you many ready-to-use data structures for DSA problems. Here are the most useful ones, grouped by what they help you do:
+Java has a **very powerful Collections framework** in `java.util` that gives you many ready-to-use data structures for DSA problems. Here are the most useful ones, grouped by what they help you do:
 
 ## 1. Dynamic Lists (like ArrayList)
 
@@ -87,8 +85,4 @@ They're all in `java.util`, so you just need:
 ```java
 import java.util.*;
 ```
-
-This gives you everything in one line.
-
-Would you like a **ready-to-use DSA imports template** with all these classes and common helper methods for exams?
 
