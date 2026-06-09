@@ -12,7 +12,7 @@
 This repository is used for daily DSA practice questions, topic-wise coding, and concept revision.  
 For now it includes problem-solving practice across arrays, strings, matrices, and common algorithm patterns.
 
-## Progress Tracker
+# *Progress Tracker*
 
 ## ARRAY
 - [ ] Find max sum of row in a matrix and discard it while printing.
