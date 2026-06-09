@@ -32,11 +32,11 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Reverse each row in a matrix.
 - [ ] Sum of boundary elements in a matrix.
 - [ ] Negative of even rows and swap those rows in a matrix.
-- [ ] Rotate matrix by 90Â°.
+- [ ] Rotate matrix by 90°
 - [ ] Spiral traversal of matrix.
 - [ ] Matrix diagonal difference.
-- [ ] Rotate matrix by 180Â°.
-- [ ] Kadaneâ€™s Algorithm.
+- [ ] Rotate matrix by 180°.
+- [ ] Kadance Algorithm.
 - [ ] Max Product SubArray.
 
 ## STRING
@@ -65,7 +65,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Convert singly to circular.
 - [ ] Count no. of nodes.
 - [ ] Count occurrences of given key.
-- [ ] Delete at specific position in circular queue.
+- [ ] Delete at specific position in circular linked list
 - [ ] Detect cycle in a linkedlist.
 - [ ] Intersection point.
 - [ ] Merge two sorted linkedlist.
@@ -116,8 +116,8 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 
 
 ## Searching and Sorting
-- [ ]
-- [ ] 
+- [ ] Linear Search
+- [ ] Binary Search
 - [ ] 
 - [ ] 
 - [ ] 
