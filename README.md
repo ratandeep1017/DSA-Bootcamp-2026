@@ -18,9 +18,6 @@ This repository is designed for:
 
 
 ## Topics to Cover
-- [About](#about)
-- [Topics to Cover](#topics-to-cover)
-- [Progress Tracker](#progress-tracker)
 - [Arrays](#arrays)
 - [Strings](#strings)
 - [Linked List](#linked-list)
@@ -31,14 +28,9 @@ This repository is designed for:
 - [Advanced Algorithms](#advanced-algorithms)
 - [How to Use](#how-to-use)
 - [Resources](#resources)
-- [License](#license)
 
 
-
-## Progress Tracker
-
-
-
+# Progress Tracker
 ## Arrays
 - Find largest element in array
 - Difference between first & last element
@@ -64,7 +56,6 @@ This repository is designed for:
 - Maximum Product Subarray
 
 
-
 ## Strings
 - Count vowels
 - Create username
@@ -87,7 +78,6 @@ This repository is designed for:
 - Rabin-Karp Algorithm
 - Z Algorithm
 - Shortest Palindrome
-
 
 
 ## Linked List
