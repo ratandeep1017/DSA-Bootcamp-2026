@@ -13,12 +13,12 @@ This repository is used for daily DSA practice questions, topic-wise coding, & c
 For now it includes problem-solving practice across arrays, strings, matrices, & common algorithm patterns.
 
 ## 🔷TOPICS TO COVER🔷
-- [ ] ***ADVANCE ALGORITHMS***
-- [ ] ARRAYS
-- [ ] STRING
-- [ ] LINKED LISTS
-- [ ] STACK & QUEUE
-- [ ] SEARCHING & SORTING
+- [ ] 0. ***ADVANCE ALGORITHMS***
+- [ ] 1. [ARRAYS](#🟤ARRAYS)
+- [ ] 2. STRING
+- [ ] 3. LINKED LISTS
+- [ ] 4. STACK & QUEUE
+- [ ] 5. SEARCHING & SORTING
 
 # 🔻***Progress Tracker***🔻
 
