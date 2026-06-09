@@ -1,6 +1,6 @@
 <h1 align="center">DSA-Bootcamp-2026</h1>
 <p align="center">
-  A structured DSA practice repo for DSA and core algorithms.
+  A structured DSA practice repo for DSA & core algorithms.
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
@@ -9,14 +9,22 @@
 </p>
 
 ## About
-This repository is used for daily DSA practice questions, topic-wise coding, and concept revision.  
-For now it includes problem-solving practice across arrays, strings, matrices, and common algorithm patterns.
+This repository is used for daily DSA practice questions, topic-wise coding, & concept revision.  
+For now it includes problem-solving practice across arrays, strings, matrices, & common algorithm patterns.
 
-# *Progress Tracker*
+## 🔷TOPICS TO COVER🔷
+- [ ] ***ADVANCE ALGORITHMS***
+- [ ] ARRAYS
+- [ ] STRING
+- [ ] LINKED LISTS
+- [ ] STACK & QUEUE
+- [ ] SEARCHING & SORTING
 
-## ARRAY
-- [ ] Find max sum of row in a matrix and discard it while printing.
-- [ ] Difference between first and last element in an array.
+# 🔻***Progress Tracker***🔻
+
+## 🟤ARRAYS
+- [ ] Find max sum of row in a matrix & discard it while printing.
+- [ ] Difference between first & last element in an array.
 - [ ] Find largest element in array.
 - [ ] Delete the smallest element from an array.
 - [ ] Count frequency of numbers in an array.
@@ -27,11 +35,11 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] DNF (Dutch National Flag Algorithm) sort (0s, 1s, 2s).
 - [ ] Trapping Rainwater.
 - [ ] Container With Most Water.
-- [ ] Find max row in a matrix and discard it.
-- [ ] Insert row and column in a matrix.
+- [ ] Find max row in a matrix & discard it.
+- [ ] Insert row & column in a matrix.
 - [ ] Reverse each row in a matrix.
 - [ ] Sum of boundary elements in a matrix.
-- [ ] Negative of even rows and swap those rows in a matrix.
+- [ ] Negative of even rows & swap those rows in a matrix.
 - [ ] Rotate matrix by 90°
 - [ ] Spiral traversal of matrix.
 - [ ] Matrix diagonal difference.
@@ -39,7 +47,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Kadance Algorithm.
 - [ ] Max Product SubArray.
 
-## STRING
+## 🟣STRING
 - [ ] Count vowels.
 - [ ] Create username.
 - [ ] Palindrome string.
@@ -60,7 +68,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Decode compressed string.
 - [ ] Extra Problems: KMP, Rabin Karp, Z algorithm, Shortest Palindrome.
 
-## LINKEDLIST
+## 🔵LINKEDLIST
 - [ ] Add two number.
 - [ ] Convert singly to circular.
 - [ ] Count no. of nodes.
@@ -87,7 +95,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] House Robber Problem.
 - [ ] Coin Change.
 
-## STACK & QUEUE
+## 🟢STACK & QUEUE
 - [ ] Menu Driven Stack Program using Linkedlist.
 - [ ] Reverse String Program.
 - [ ] Sum of elements in queue.
@@ -95,7 +103,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Stack Implementation Using Array & Linkedlist.
 - [ ] Queue Implementation Using Array & Linkedlist.
 - [ ] Valid Parenthesis.
-- [ ] Infix, Postfix and Prefix implementation & its conversion.
+- [ ] Infix, Postfix & Prefix implementation & its conversion.
 - [ ] Next Greater Element.
 - [ ] Stock Span.
 - [ ] Implementation of min stack.
@@ -115,18 +123,18 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] N-Stack implementation.
 
 
-## Searching and Sorting
-- [ ] Linear Search
-- [ ] Binary Search
+## 🟡Searching & Sorting
+- [ ] Linear & Binary Search
 - [ ] Comparison of **Sorting** Algorithms
-  - [ ] Insertion  
-  - [ ] Selection  
-  - [ ] Bubble   
-  - [ ] Heap   
-  - [ ] **Sorting in Linear Time:** Counting and Bucket Sort
-  - [ ] **Divide and Conquer Sorting:** Merge and Quick Sort  
+- [ ] Insertion  
+- [ ] Selection  
+- [ ] Bubble   
+- [ ] Heap   
+- [ ] Cyclic
+- [ ] **Sorting in Linear Time:** Counting &Bucket Sort
+- [ ] **Divide & Conquer Sorting:** Merge & Quick Sort  
 
-## 🔴Algorithms + RANDOM - DS(Unknown)
+## 🔴Algorithms + R&OM - DS(Unknown)
 - [ ] Sliding window.
 - [ ] Two pointers.
 - [ ] Binary search
@@ -153,23 +161,22 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Frequency Sort
 
 
-
 ---
 
 ## How to Use
 - Each folder contains topic-wise practice problems.
-- Code is written mainly for learning and revision.
-- The checklist helps track completed and pending topics.
+- Code is written mainly for learning & revision.
+- The checklist helps track completed & pending topics.
   1. Clone the repository.
   2. Open the topic folder you want to practice.
-  3. Read the code, run it, and modify it for your own learning.
+  3. Read the code, run it, & modify it for your own learning.
   4. Mark topics as completed in the checklist. 
-- **License** : This repository is for personal learning and practice.
+- **License** : This repository is for personal learning & practice.
 
 ---
 
-### Extra LINKS and PDFs For DSA
->https://github.com/ratandeep1017
+### Extra LINKS & PDFs For DSA
+>https://github.com/rat&eep1017
 
 >NeetCode150 Sheet : https://neetcode.io/practice/practice/neetcode150
 
@@ -177,7 +184,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 
 > Solution in JAVA - STRIVER DSA Sheet: https://github.com/ashutosh11019/Strivers-A2Z-DSA-Course-Sheet
 
->Colored Emogies : 
+>Colored Emogies For Topics: 
  🔘🔴🟡🟢🔵🟣🟤⚫🟠🔴⚪
  🟥🟧🟨🟩🟦🟪🟫⬛⬜
  🔶🔸🔷🔹🔺🔻
