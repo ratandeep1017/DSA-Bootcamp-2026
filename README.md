@@ -14,79 +14,106 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 
 ## Progress Tracker
 
-### 🟢Arrays
-- [x] Find/Delete the min/max element from an array
-- [ ] Insert a row and a column.
-- [ ] Leaders in the array
-- [ ] Longest Consecutive Increasing Subarray
-- [ ] Sort 0s, 1s, 2s
+## ARRAY
+- [ ] Find max sum of row in a matrix and discard it while printing.
+- [ ] Difference between first and last element in an array.
+- [ ] Find largest element in array.
+- [ ] Delete the smallest element from an array.
+- [ ] Count frequency of numbers in an array.
+- [ ] Sum of array (range given).
+- [ ] Leaders in an array.
+- [ ] Longest consecutive increasing subarray.
+- [ ] Frequency sort.
+- [ ] DNF (Dutch National Flag Algorithm) sort (0s, 1s, 2s).
+- [ ] Trapping Rainwater.
+- [ ] Container With Most Water.
+- [ ] Find max row in a matrix and discard it.
+- [ ] Insert row and column in a matrix.
+- [ ] Reverse each row in a matrix.
+- [ ] Sum of boundary elements in a matrix.
+- [ ] Negative of even rows and swap those rows in a matrix.
+- [ ] Rotate matrix by 90Â°.
+- [ ] Spiral traversal of matrix.
+- [ ] Matrix diagonal difference.
+- [ ] Rotate matrix by 180Â°.
+- [ ] Kadaneâ€™s Algorithm.
+- [ ] Max Product SubArray.
 
-### 🟣Matrix
-- [x] Sum of diagonal elements.
-- [x] Find the row with Maximum/Minimum sum and discard it.
-- [ ] Sum of boundary elements.
-- [ ] Reverse each row and each column in a matrix.
-- [ ] Rotate a matrix by 90 degrees and by 'n' times
-- [ ] Spiral Traversal Of Matrix
+## STRING
+- [ ] Count vowels.
+- [ ] Create username.
+- [ ] Palindrome string.
+- [ ] Pattern replacement.
+- [ ] Remove duplicate characters.
+- [ ] Find first non-repeating character.
+- [ ] Check if two strings are anagram or not.
+- [ ] Group anagrams.
+- [ ] Longest Common Subsequence (LCS).
+- [ ] Longest Palindromic Subsequence.
+- [ ] Longest Prefix.
+- [ ] String Compression.
+- [ ] Longest Substring Without Repeating Characters.
+- [ ] Minimum Window Substring.
+- [ ] Next Permutation of String.
+- [ ] Rotate String.
+- [ ] First Non-Repeating Character in String.
+- [ ] Decode compressed string.
+- [ ] Extra Problems: KMP, Rabin Karp, Z algorithm, Shortest Palindrome.
 
-### 🔵Strings
-- [x] Count vowels or consonants
-- [x] Remove vowels or consonants
-- [x] Split the string into array while removing spaces
-- [x] Palindrome string
-- [x] Find First Non Repeating Character
-- [x] Find all permutations of a string (abc) - (abc,acb,bac,cab,...)
-- [x] String Compression
-- [x] String Expansion
-- [x] Reverse Characters in a string
-- [x] Reverse words in a string
-- [ ] Every Character frequency
-- [ ] Remove Duplicate Characters
-- [ ] Reverse Characters in a string from a specific character
-- [ ] Check if Two Strings are ANAGRRAM or not 
-- [ ] Anagram strings
-- [ ] Group Anagrams
-- [ ] Longest Common Prefix
-- [ ] Longest Common Subsequence
-- [ ] Longest Palindromic Subsequence
-- [ ] Longest Substring without Repeating Character
-- [ ] Minimum Window Substring
-- [ ] Valid Parenthesis check by String or using Stack
-- [ ] find a pattern and replace it with specific Character
+## LINKEDLIST
+- [ ] Add two number.
+- [ ] Convert singly to circular.
+- [ ] Count no. of nodes.
+- [ ] Count occurrences of given key.
+- [ ] Delete at specific position in circular queue.
+- [ ] Detect cycle in a linkedlist.
+- [ ] Intersection point.
+- [ ] Merge two sorted linkedlist.
+- [ ] Middle node.
+- [ ] Check linkedlist is Palindrome or not.
+- [ ] Remove duplicates from Sorted Linkedlist.
+- [ ] Remove every kth node.
+- [ ] Reverse linkedlist.
+- [ ] Update value at index in DLL.
+- [ ] Delete Elements With Matching given Prefix.
+- [ ] Segregate Odd Even Linkedlist.
+- [ ] Remove Duplicate from Linkedlist.
+- [ ] Remove node whose sum of data is Even.
+- [ ] Cloning of linkedlist.
+- [ ] Flattening.
+- [ ] Group Wise.
+- [ ] Knapsack (Fractional).
+- [ ] Rod Cutting Problem.
+- [ ] House Robber Problem.
+- [ ] Coin Change.
 
-### 🟡ArrayList Questions
-- [x] CheckPrefixRemoveElement
-- [x] CountElements
-- [x] DeleteAtIndex
-- [x] OddSumOfDigits
-- [x] RemovingDuplicateFromBack
-- [x] ReplaceValueAtIndex
-- [x] Reverse
-- [x] ReverseEvenThenOdd
+## STACK & QUEUE
+- [ ] Menu Driven Stack Program using Linkedlist.
+- [ ] Reverse String Program.
+- [ ] Sum of elements in queue.
+- [ ] Menu Driven Circular Queue Program.
+- [ ] Stack Implementation Using Array & Linkedlist.
+- [ ] Queue Implementation Using Array & Linkedlist.
+- [ ] Valid Parenthesis.
+- [ ] Infix, Postfix and Prefix implementation & its conversion.
+- [ ] Next Greater Element.
+- [ ] Stock Span.
+- [ ] Implementation of min stack.
+- [ ] Queue using stack.
+- [ ] Stack using queue.
+- [ ] Sliding window maximum.
+- [ ] First Negative in a window.
+- [ ] Celebrity Problem.
+- [ ] Largest Rectangle in histogram.
+- [ ] Trapping Rainwater using stack.
+- [ ] Generate Binary Number from 1 to N using Queue.
+- [ ] Sort a stack using another stack.
+- [ ] Delete middle element of stack.
+- [ ] Implement two stack in an array.
+- [ ] Reverse first k element of a queue.
+- [ ] Reverse a string using stack.
+- [ ] N-Stack implementation.
 
-
-### 🟤Stack
-- [ ] Stack using Array and LinkedList
-- [x] Reverse the String as : "Hello World" -> "olleH dlroW"
-- [ ] User Choice based "Push pop and peek" opearions
-- [ ] Valid Parenthesis check using stack
-- [ ] Infix prefix postfix - conversion and implementation
-- [ ] Postfix Evaluation
-- [ ] Min Stack Problem
-- [ ] QUEUE using STACK
-- [ ] Sort elements in stack using a STACK
-- [ ] Delete middle element of stack
-- [ ] implement two stacks in a single array (using two pointer)
-- [ ] N-Stacks Implementation
-
-
-### ⚫Queue
-- [ ] Queue using Array and LinkedList
-- [ ] Circular Queue using Array and LinkedList
-- [x] sum of all the elements with when Enqued and Dequed operations
-- [ ] STACK using QUEUE
-- [ ] Generate binary numbers from (1 to n) using queue
-- [ ] reverse 1st k elements in a queue
 
 ### Searching and Sorting
 - [ ]
