@@ -115,14 +115,14 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] N-Stack implementation.
 
 
-### Searching and Sorting
+## Searching and Sorting
 - [ ]
 - [ ] 
 - [ ] 
 - [ ] 
 - [ ] 
 
-### 🔴Algorithms + RANDOM - DS(Unknown)
+## 🔴Algorithms + RANDOM - DS(Unknown)
 - [ ] Sliding window.
 - [ ] Two pointers.
 - [ ] Binary search
@@ -141,8 +141,7 @@ For now it includes problem-solving practice across arrays, strings, matrices, a
 - [ ] Trapping Rain Water
 
 
-
-### 🟠Advanced Algorithms
+## 🟠Advanced Algorithms
 - [ ] Shortest palindrome
 - [ ] Z-Algo
 - [ ] Rabin-Karp -> A string-searching algorithm
