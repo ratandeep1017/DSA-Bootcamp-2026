@@ -19,8 +19,6 @@ This repository is designed for:
 ---
 
 ## Topics to Cover
-
-
 - [About](#about)
 - [Topics to Cover](#topics-to-cover)
 - [Progress Tracker](#progress-tracker)
@@ -36,65 +34,62 @@ This repository is designed for:
 - [Resources](#resources)
 - [License](#license)
 
----
+
 
 ## Progress Tracker
-Use the checklist below to track every question from the original repo. Each item includes a difficulty tag and a direct LeetCode link where available.
 
----
+
 
 ## Arrays
-- [ ] Find max sum of row in a matrix & discard it while printing. **[Easy]** [LeetCode #2679](https://leetcode.com/problems/sum-in-a-matrix/)
-- [ ] Difference between first & last element in an array. **[Easy]** [LeetCode #2016](https://leetcode.com/problems/maximum-difference-between-increasing-elements/)
-- [ ] Find largest element in array. **[Easy]** [LeetCode #53](https://leetcode.com/problems/maximum-subarray/)
-- [ ] Delete the smallest element from an array. **[Easy]** [LeetCode #27](https://leetcode.com/problems/remove-element/)
-- [ ] Count frequency of numbers in an array. **[Easy]** [LeetCode #169](https://leetcode.com/problems/majority-element/)
-- [ ] Sum of array (range given). **[Easy]** [LeetCode #303](https://leetcode.com/problems/range-sum-query-immutable/)
-- [ ] Leaders in an array. **[Medium]** *(GFG-only — see [LeetCode Unknown Problems](#leetcode-unknown-problems))*
-- [ ] Longest consecutive increasing subarray. **[Medium]** [LeetCode #128](https://leetcode.com/problems/longest-consecutive-sequence/)
-- [ ] Frequency sort. **[Medium]** [LeetCode #451](https://leetcode.com/problems/sort-characters-by-frequency/)
-- [ ] DNF (Dutch National Flag Algorithm) sort (0s, 1s, 2s). **[Medium]** [LeetCode #75](https://leetcode.com/problems/sort-colors/)
-- [ ] Trapping Rainwater. **[Hard]** [LeetCode #42](https://leetcode.com/problems/trapping-rain-water/)
-- [ ] Container With Most Water. **[Medium]** [LeetCode #11](https://leetcode.com/problems/container-with-most-water/)
-- [ ] Find max row in a matrix & discard it. **[Easy]** [LeetCode #2679](https://leetcode.com/problems/sum-in-a-matrix/)
-- [ ] Insert row & column in a matrix. **[Easy]** [LeetCode #73](https://leetcode.com/problems/set-matrix-zeroes/)
-- [ ] Reverse each row in a matrix. **[Easy]** [LeetCode #151](https://leetcode.com/problems/reverse-words-in-a-string/)
-- [ ] Sum of boundary elements in a matrix. **[Easy]** [LeetCode #54](https://leetcode.com/problems/spiral-matrix/)
-- [ ] Negative of even rows & swap those rows in a matrix. **[Medium]** [LeetCode #48](https://leetcode.com/problems/rotate-image/)
-- [ ] Rotate matrix by 90°. **[Medium]** [LeetCode #48](https://leetcode.com/problems/rotate-image/)
-- [ ] Spiral traversal of matrix. **[Medium]** [LeetCode #54](https://leetcode.com/problems/spiral-matrix/)
-- [ ] Matrix diagonal difference. **[Easy]** [LeetCode #1572](https://leetcode.com/problems/matrix-diagonal-sum/)
-- [ ] Rotate matrix by 180°. **[Medium]** [LeetCode #48](https://leetcode.com/problems/rotate-image/)
-- [ ] Kadane Algorithm. **[Easy]** [LeetCode #53](https://leetcode.com/problems/maximum-subarray/)
-- [ ] Max Product SubArray. **[Medium]** [LeetCode #152](https://leetcode.com/problems/maximum-product-subarray/)
+- Find largest element in array
+- Difference between first & last element
+- Delete the smallest element
+- Count frequency of elements
+- Sum of array (range queries)
+- Leaders in an array
+- Longest consecutive increasing subarray
+- Frequency sort
+- Dutch National Flag (0s, 1s, 2s)
+- Trapping Rainwater
+- Container With Most Water
+- Maximum sum row in matrix (and discard it)
+- Insert row & column in matrix
+- Reverse each row of matrix
+- Boundary elements sum
+- Modify even rows (negate & swap)
+- Rotate matrix by 90°
+- Rotate matrix by 180°
+- Spiral traversal
+- Matrix diagonal difference
+- Kadane’s Algorithm (Maximum Subarray Sum)
+- Maximum Product Subarray
 
----
+
 
 ## Strings
-- [ ] Count vowels. **[Easy]** [LeetCode #345](https://leetcode.com/problems/reverse-vowels-of-a-string/)
-- [ ] Create username. **[Easy]** [LeetCode #58](https://leetcode.com/problems/length-of-last-word/)
-- [ ] Palindrome string. **[Easy]** [LeetCode #125](https://leetcode.com/problems/valid-palindrome/)
-- [ ] Pattern replacement. **[Easy]** [LeetCode #1576](https://leetcode.com/problems/replace-all-s-to-avoid-consecutive-repeating-characters/)
-- [ ] Remove duplicate characters. **[Easy]** [LeetCode #316](https://leetcode.com/problems/remove-duplicate-letters/)
-- [ ] Find first non-repeating character. **[Easy]** [LeetCode #387](https://leetcode.com/problems/first-unique-character-in-a-string/)
-- [ ] Check if two strings are anagram or not. **[Easy]** [LeetCode #242](https://leetcode.com/problems/valid-anagram/)
-- [ ] Group anagrams. **[Medium]** [LeetCode #49](https://leetcode.com/problems/group-anagrams/)
-- [ ] Longest Common Subsequence (LCS). **[Medium]** [LeetCode #1143](https://leetcode.com/problems/longest-common-subsequence/)
-- [ ] Longest Palindromic Subsequence. **[Medium]** [LeetCode #516](https://leetcode.com/problems/longest-palindromic-subsequence/)
-- [ ] Longest Prefix. **[Easy]** [LeetCode #14](https://leetcode.com/problems/longest-common-prefix/)
-- [ ] String Compression. **[Easy]** [LeetCode #443](https://leetcode.com/problems/string-compression/)
-- [ ] Longest Substring Without Repeating Characters. **[Medium]** [LeetCode #3](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-- [ ] Minimum Window Substring. **[Hard]** [LeetCode #76](https://leetcode.com/problems/minimum-window-substring/)
-- [ ] Next Permutation of String. **[Medium]** [LeetCode #31](https://leetcode.com/problems/next-permutation/)
-- [ ] Rotate String. **[Easy]** [LeetCode #796](https://leetcode.com/problems/rotate-string/)
-- [ ] First Non-Repeating Character in String. **[Easy]** [LeetCode #387](https://leetcode.com/problems/first-unique-character-in-a-string/)
-- [ ] Decode compressed string. **[Easy]** [LeetCode #394](https://leetcode.com/problems/decode-string/)
-- [ ] KMP. **[Hard]** [LeetCode #28](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
-- [ ] Rabin Karp. **[Hard]** [LeetCode #28](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
-- [ ] Z algorithm. **[Hard]** [LeetCode #28](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
-- [ ] Shortest Palindrome. **[Hard]** [LeetCode #214](https://leetcode.com/problems/shortest-palindrome/)
+- Count vowels
+- Create username
+- Palindrome check
+- Pattern replacement
+- Remove duplicate characters
+- First non-repeating character
+- Check anagram
+- Group anagrams
+- Longest Common Subsequence (LCS)
+- Longest Palindromic Subsequence
+- Longest prefix (common prefix)
+- String compression
+- Longest substring without repeating characters
+- Minimum window substring
+- Next permutation of string
+- Rotate string
+- Decode compressed string
+- KMP Algorithm
+- Rabin-Karp Algorithm
+- Z Algorithm
+- Shortest Palindrome
 
----
+
 
 ## Linked List
 - [ ] Add two numbers. **[Medium]** [LeetCode #2](https://leetcode.com/problems/add-two-numbers/)
@@ -227,11 +222,18 @@ The following problems don't have a direct LeetCode equivalent. The nearest matc
 ---
 
 ## Resources
-- NeetCode 150: [https://neetcode.io/practice](https://neetcode.io/practice)
-- Striver SDE Sheet: [https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems](https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems)
-- Java Solutions (Striver Sheet): [https://github.com/ashutosh11019/Strivers-A2Z-DSA-Course-Sheet](https://github.com/ashutosh11019/Strivers-A2Z-DSA-Course-Sheet)
+>https://github.com/rat&eep1017
 
----
+>NeetCode150 Sheet : https://neetcode.io/practice/practice/neetcode150
+
+>STRIVER DSA Sheet :  https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems
+
+> Solution in JAVA - STRIVER DSA Sheet: https://github.com/ashutosh11019/Strivers-A2Z-DSA-Course-Sheet
+
+>Colored Emogies For Topics: 
+ 🔘🔴🟡🟢🔵🟣🟤⚫🟠🔴⚪
+ 🟥🟧🟨🟩🟦🟪🟫⬛⬜
+ 🔶🔸🔷🔹🔺🔻
 
 ## License
 This repository is intended for personal learning and practice.
