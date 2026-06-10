@@ -15,30 +15,23 @@ This repository is designed for:
 - Topic-wise problem solving
 - Concept revision for interviews and exams
 
-
-
 ## Topics to Cover
-- [About](#about)
-- [Topics to Cover](#topics-to-cover)
 - [Progress Tracker](#progress-tracker)
-- [Arrays](#arrays)
-- [Matrix](#matrix)
-- [Strings](#strings)
-- [Linked List](#linked-list)
-- [Stack \& Queue](#stack--queue)
-- [Searching \& Sorting](#searching--sorting)
-- [Algorithmic Patterns](#algorithmic-patterns)
-- [Dynamic Programming](#dynamic-programming)
-- [Advanced Algorithms](#advanced-algorithms)
-- [How to Use](#how-to-use)
-- [Resources](#resources)
-- [License](#license)
+  - [Arrays](#arrays)
+  - [Matrix](#matrix)
+  - [Strings](#strings)
+  - [Linked List](#linked-list)
+  - [Stack \& Queue](#stack--queue)
+  - [Searching \& Sorting](#searching--sorting)
+  - [Algorithmic Patterns](#algorithmic-patterns)
+  - [Dynamic Programming](#dynamic-programming)
+  - [Advanced Algorithms](#advanced-algorithms)
+  - [How to Use](#how-to-use)
+  - [Resources](#resources)
+  - [License](#license)
 
 
-
-## Progress Tracker
-
-
+# Progress Tracker
 
 ## Arrays
 - [ ] Find largest element in array
@@ -90,8 +83,6 @@ This repository is designed for:
 - [ ] Z Algorithm
 - [ ] Shortest Palindrome
 
-
-
 ## Linked List
 - [ ] Add two numbers
 - [ ] Convert singly to circular
@@ -139,8 +130,6 @@ This repository is designed for:
 - [ ] Reverse first k elements of queue
 - [ ] N-stack implementation
 
-
-
 ## Searching & Sorting
 - [ ] Linear search
 - [ ] Binary search
@@ -155,8 +144,6 @@ This repository is designed for:
 - [ ] Bucket sort
 - [ ] Comparison of sorting algorithms
 
-
-
 ## Algorithmic Patterns
 - [ ] Sliding window
 - [ ] Two pointers
@@ -164,8 +151,6 @@ This repository is designed for:
 - [ ] Prefix sum
 - [ ] Hashing / frequency map
 - [ ] Bit manipulation
-
-
 
 ## Dynamic Programming
 - [ ] Kadane’s Algorithm
@@ -175,15 +160,11 @@ This repository is designed for:
 - [ ] Longest Common Subsequence
 - [ ] Longest Palindromic Subsequence
 
-
-
 ## Advanced Algorithms
 - [ ] KMP string matching
 - [ ] Rabin-Karp
 - [ ] Z Algorithm
 - [ ] Shortest palindrome
-
-
 
 ## How to Use
 1. Clone the repository
@@ -191,8 +172,6 @@ This repository is designed for:
 3. Read and run code
 4. Modify solutions for better understanding
 5. Mark completed problems
-
-
 
 ## Resources
 >https://github.com/rat&eep1017
