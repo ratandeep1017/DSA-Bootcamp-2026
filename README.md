@@ -185,7 +185,7 @@ This repository is designed for:
 
 
 ## Resources
->https://github.com/rat&eep1017
+>https://github.com/ratandeep1017
 
 >NeetCode150 Sheet : https://neetcode.io/practice/practice/neetcode150
 
