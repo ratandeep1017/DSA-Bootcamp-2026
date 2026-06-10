@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DSA Bootcamp 2026 — Approach Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg-base:       #0b0f1a;
+    --bg-layer:      #111827;
+    --glass-bg:      rgba(255,255,255,0.04);
+    --glass-border:  rgba(255,255,255,0.10);
+    --glass-hover:   rgba(255,255,255,0.08);
+    --accent-purple: #8b7cf8;
+    --accent-teal:   #34d399;
+    --accent-orange: #fb923c;
+    --text-primary:  #f0f4ff;
+    --text-secondary:#94a3b8;
+    --text-muted:    #475569;
+
+    --easy:    #22c55e;
+    --easy-bg: rgba(34,197,94,0.12);
+    --med:     #f59e0b;
+    --med-bg:  rgba(245,158,11,0.12);
+    --hard:    #ef4444;
+    --hard-bg: rgba(239,68,68,0.12);
+
+    --ds-hashmap:   #a78bfa;
+    --ds-hashset:   #34d399;
+    --ds-deque:     #fb923c;
+    --ds-list:      #60a5fa;
+    --ds-pq:        #fbbf24;
+    --ds-tree:      #4ade80;
+    --ds-linked:    #f472b6;
+    --ds-arr:       #94a3b8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── Animated mesh background ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(139,124,248,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 80%, rgba(52,211,153,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 40% at 60% 30%, rgba(251,146,60,0.06) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrap { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* ── Header ── */
+  header {
+    padding: 3rem 0 2.5rem;
+    text-align: center;
+  }
+
+  .header-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent-purple);
+    margin-bottom: .75rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  header h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #f0f4ff 30%, var(--accent-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: .75rem;
+  }
+
+  header p {
+    color: var(--text-secondary);
+    font-size: .95rem;
+    max-width: 480px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+
+  /* ── Stats row ── */
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+
+  .stat-pill {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    padding: .35rem .9rem;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    backdrop-filter: blur(12px);
+  }
+
+  .stat-pill .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Controls panel ── */
+  .controls {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .control-row {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+    flex-wrap: wrap;
+  }
+
+  .control-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    min-width: 64px;
+    padding-top: 5px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .btn-group { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .filter-btn {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1px solid var(--glass-border);
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all .18s ease;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .filter-btn:hover { background: var(--glass-hover); color: var(--text-primary); }
+
+  .filter-btn.active {
+    background: rgba(139,124,248,0.18);
+    border-color: var(--accent-purple);
+    color: var(--accent-purple);
+  }
+
+  .diff-btn.active-easy  { background: var(--easy-bg);  border-color: var(--easy);  color: var(--easy); }
+  .diff-btn.active-med   { background: var(--med-bg);   border-color: var(--med);   color: var(--med); }
+  .diff-btn.active-hard  { background: var(--hard-bg);  border-color: var(--hard);  color: var(--hard); }
+
+  /* ── Search ── */
+  .search-wrap {
+    position: relative;
+    max-width: 340px;
+  }
+
+  .search-wrap svg {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+  }
+
+  #search {
+    width: 100%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: .45rem .75rem .45rem 2.1rem;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color .18s;
+  }
+
+  #search::placeholder { color: var(--text-muted); }
+  #search:focus { border-color: var(--accent-purple); }
+
+  /* ── Legend ── */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .leg-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    color: var(--text-secondary);
+  }
+
+  .leg-dot {
+    width: 9px; height: 9px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* ── Topic section ── */
+  .topic-section { margin-bottom: 3rem; }
+
+  .topic-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .topic-icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+
+  .topic-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .topic-count {
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-muted);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    padding: 2px 8px;
+    margin-left: auto;
+  }
+
+  /* ── Difficulty group within a topic ── */
+  .diff-group { margin-bottom: 1.25rem; }
+
+  .diff-group-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: .6rem;
+    padding-left: .1rem;
+  }
+
+  .diff-group-label.easy  { color: var(--easy); }
+  .diff-group-label.med   { color: var(--med); }
+  .diff-group-label.hard  { color: var(--hard); }
+
+  /* ── Cards grid ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 10px;
+  }
+
+  .card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: .9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    backdrop-filter: blur(16px);
+    transition: background .18s, border-color .18s, transform .15s;
+    cursor: default;
+  }
+
+  .card:hover {
+    background: var(--glass-hover);
+    border-color: rgba(255,255,255,0.18);
+    transform: translateY(-2px);
+  }
+
+  .card-name {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    font-size: 10.5px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 100px;
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .badge-easy { background: var(--easy-bg);  color: var(--easy); }
+  .badge-med  { background: var(--med-bg);   color: var(--med); }
+  .badge-hard { background: var(--hard-bg);  color: var(--hard); }
+
+  .card-tip {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 6px;
+    margin-top: 2px;
+  }
+
+  /* ── Empty state ── */
+  .empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-muted);
+    font-size: .9rem;
+  }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.12); border-radius: 3px; }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .cards-grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 1.8rem; }
+    .control-row { flex-direction: column; }
+  }
+
+  /* ── No-result ── */
+  #no-result {
+    display: none;
+    text-align: center;
+    padding: 4rem 1rem;
+    color: var(--text-muted);
+  }
+
+  #no-result span {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-eyebrow">DSA Bootcamp 2026</div>
+    <h1>Approach Guide</h1>
+    <p>Every problem mapped to the best Java data structure, grouped by topic and difficulty.</p>
+
+    <div class="stats">
+      <div class="stat-pill"><span class="dot" style="background:var(--easy)"></span>Easy problems</div>
+      <div class="stat-pill"><span class="dot" style="background:var(--med)"></span>Medium problems</div>
+      <div class="stat-pill"><span class="dot" style="background:var(--hard)"></span>Hard problems</div>
+    </div>
+  </header>
+
+  <!-- ── Controls ── -->
+  <div class="controls">
+    <div class="control-row">
+      <span class="control-label">Topic</span>
+      <div class="btn-group" id="topic-filters"></div>
+    </div>
+    <div class="control-row">
+      <span class="control-label">DS</span>
+      <div class="btn-group" id="ds-filters"></div>
+    </div>
+    <div class="control-row">
+      <span class="control-label">Diff</span>
+      <div class="btn-group" id="diff-filters"></div>
+      <div class="search-wrap" style="margin-left:auto">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input id="search" type="text" placeholder="Search problems…" autocomplete="off" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Legend ── -->
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:#a78bfa"></div>HashMap</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#34d399"></div>HashSet</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#fb923c"></div>ArrayDeque</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#60a5fa"></div>ArrayList</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#fbbf24"></div>PriorityQueue</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#4ade80"></div>TreeMap / TreeSet</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#f472b6"></div>LinkedList</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#94a3b8"></div>int[] / int[][]</div>
+  </div>
+
+  <!-- ── Main content ── -->
+  <div id="main-content"></div>
+  <div id="no-result"><span>🔍</span>No problems match your filters.</div>
+
+</div>
+
+<script>
+const DS_COLOR = {
+  "HashMap":       "#a78bfa",
+  "HashSet":       "#34d399",
+  "ArrayDeque":    "#fb923c",
+  "ArrayList":     "#60a5fa",
+  "PriorityQueue": "#fbbf24",
+  "TreeMap":       "#4ade80",
+  "TreeSet":       "#4ade80",
+  "LinkedList":    "#f472b6",
+  "LinkedHashMap": "#f472b6",
+  "int[]":         "#94a3b8",
+  "int[][]":       "#94a3b8",
+  "Stack":         "#fb923c",
+  "StringBuilder": "#60a5fa",
+};
+
+const TOPICS = [
+  {
+    id:"arrays", label:"Arrays", icon:"📦",
+    iconBg:"rgba(139,124,248,0.18)",
+    problems:[
+      {name:"Find largest element",             diff:"Easy",   ds:["int[]"],                  tip:"Single pass, track running max."},
+      {name:"Difference: first & last",          diff:"Easy",   ds:["int[]"],                  tip:"Direct index access arr[0] and arr[n-1]."},
+      {name:"Delete smallest element",           diff:"Easy",   ds:["ArrayList"],              tip:"Scan for min index, then remove(index)."},
+      {name:"Count frequency of elements",      diff:"Easy",   ds:["HashMap"],                tip:"Map<Integer,Integer> — O(n) pass."},
+      {name:"Sum of array (range queries)",     diff:"Easy",   ds:["int[]"],                  tip:"Prefix sum array for O(1) queries."},
+      {name:"Kadane's algorithm",               diff:"Easy",   ds:["int[]"],                  tip:"maxSoFar and maxEndingHere — single pass O(n)."},
+      {name:"Max-sum row in matrix (discard)",  diff:"Easy",   ds:["int[][]"],                tip:"Sum each row, track index of max; create new matrix without that row."},
+      {name:"Insert row & column in matrix",    diff:"Easy",   ds:["ArrayList"],              tip:"Use ArrayList<int[]> so insertion is O(n) not O(n²)."},
+      {name:"Reverse each row of matrix",       diff:"Easy",   ds:["int[][]"],                tip:"For each row call Collections.reverse() or two-pointer swap."},
+      {name:"Boundary elements sum",            diff:"Easy",   ds:["int[][]"],                tip:"Traverse top row, bottom row, left col, right col — avoid double-counting corners."},
+      {name:"Matrix diagonal difference",       diff:"Easy",   ds:["int[][]"],                tip:"Sum primary diagonal (i,i) and secondary (i, n-1-i), take |diff|."},
+      {name:"Leaders in an array",              diff:"Medium", ds:["ArrayList"],              tip:"Traverse right-to-left tracking running max; push leaders to list, then reverse."},
+      {name:"Longest consecutive increasing subarray",diff:"Medium",ds:["int[]"],            tip:"Single pass, local counter reset on break."},
+      {name:"Frequency sort",                   diff:"Medium", ds:["HashMap","PriorityQueue"],tip:"Count with HashMap, sort by frequency using a custom Comparator or PriorityQueue."},
+      {name:"Dutch National Flag (0s 1s 2s)",   diff:"Medium", ds:["int[]"],                  tip:"3-pointer in-place swap — low/mid/high, one pass."},
+      {name:"Container With Most Water",        diff:"Medium", ds:["int[]"],                  tip:"Two-pointer: move the shorter-height side inward."},
+      {name:"Modify even rows (negate & swap)", diff:"Medium", ds:["int[][]"],                tip:"Identify even-indexed rows, negate values, then swap row pairs in-place."},
+      {name:"Rotate matrix 90°",                diff:"Medium", ds:["int[][]"],                tip:"Transpose in-place then reverse each row."},
+      {name:"Rotate matrix 180°",               diff:"Medium", ds:["int[][]"],                tip:"Apply 90° rotation twice, or reverse the matrix and each row."},
+      {name:"Spiral traversal",                 diff:"Medium", ds:["ArrayList"],              tip:"Four boundary pointers (top/bottom/left/right), shrink after each side."},
+      {name:"Maximum Product Subarray",         diff:"Medium", ds:["int[]"],                  tip:"Track both maxProd and minProd — negative × negative flips sign."},
+      {name:"Trapping Rainwater",               diff:"Hard",   ds:["int[]"],                  tip:"Precompute leftMax[] and rightMax[], then min(left,right)−height[i] per cell. Or use two-pointer."},
+    ]
+  },
+  {
+    id:"strings", label:"Strings", icon:"🔤",
+    iconBg:"rgba(52,211,153,0.18)",
+    problems:[
+      {name:"Count vowels",                     diff:"Easy",   ds:["HashSet"],                tip:"Put vowels in a HashSet, iterate chars, check contains()."},
+      {name:"Create username",                  diff:"Easy",   ds:["StringBuilder"],          tip:"Build string with StringBuilder; use charAt / split for tokens."},
+      {name:"Palindrome check",                 diff:"Easy",   ds:["int[]"],                  tip:"Two-pointer from both ends — no extra space needed."},
+      {name:"Pattern replacement",              diff:"Easy",   ds:["HashMap"],                tip:"Map each pattern token to its replacement."},
+      {name:"Remove duplicate characters",      diff:"Easy",   ds:["LinkedHashMap","HashSet"],tip:"LinkedHashSet preserves insertion order and removes duplicates automatically."},
+      {name:"First non-repeating character",    diff:"Easy",   ds:["LinkedHashMap"],         tip:"LinkedHashMap maintains order; first entry with value 1 is the answer."},
+      {name:"Check anagram",                    diff:"Easy",   ds:["HashMap"],                tip:"Count chars of s1, decrement for s2, check all zeros. Or sort both."},
+      {name:"Longest common prefix",            diff:"Easy",   ds:["int[]"],                  tip:"Sort the array, compare only first and last string char by char."},
+      {name:"String compression",               diff:"Easy",   ds:["ArrayList"],              tip:"Two-pointer: count consecutive chars, write char + count to output."},
+      {name:"Rotate string",                    diff:"Easy",   ds:["int[]"],                  tip:"Concatenate string with itself; check if goal is a substring."},
+      {name:"Decode compressed string",         diff:"Easy",   ds:["Stack"],                  tip:"Stack-based: push chars/numbers, process closing ']' by popping and repeating."},
+      {name:"Group anagrams",                   diff:"Medium", ds:["HashMap"],                tip:"Key = sorted(word). Map<String, List<String>>."},
+      {name:"LCS",                              diff:"Medium", ds:["int[][]"],                tip:"2-D DP table. dp[i][j] = dp[i-1][j-1]+1 if chars match, else max(dp[i-1][j], dp[i][j-1])."},
+      {name:"Longest Palindromic Subsequence",  diff:"Medium", ds:["int[][]"],                tip:"DP variant of LCS — compare string with its reverse."},
+      {name:"Longest substring no repeats",     diff:"Medium", ds:["HashMap"],                tip:"Sliding window + HashMap<char, lastIndex>. Shrink left when duplicate found."},
+      {name:"Next permutation",                 diff:"Medium", ds:["int[]"],                  tip:"Find rightmost descent, swap with next-greater, reverse suffix — all in-place."},
+      {name:"Minimum window substring",         diff:"Hard",   ds:["HashMap"],                tip:"Sliding window: two HashMaps (need, have), expand right, shrink left."},
+      {name:"KMP algorithm",                    diff:"Hard",   ds:["int[]"],                  tip:"Build failure function array (LPS), then single-pass match with two pointers."},
+      {name:"Rabin-Karp",                       diff:"Hard",   ds:["int[]"],                  tip:"Rolling hash — remove leading char, add trailing char each slide."},
+      {name:"Z algorithm",                      diff:"Hard",   ds:["int[]"],                  tip:"Z[] array: Z[i] = length of longest substring starting at i matching prefix."},
+      {name:"Shortest palindrome",              diff:"Hard",   ds:["int[]"],                  tip:"Find longest palindromic prefix using KMP on s + '#' + reverse(s)."},
+    ]
+  },
+  {
+    id:"linked-list", label:"Linked List", icon:"🔗",
+    iconBg:"rgba(244,114,182,0.18)",
+    problems:[
+      {name:"Convert singly to circular",       diff:"Easy",   ds:["LinkedList"],             tip:"Traverse to tail node, set tail.next = head."},
+      {name:"Count nodes",                      diff:"Easy",   ds:["LinkedList"],             tip:"Linear traversal with counter — O(n)."},
+      {name:"Count occurrences of key",         diff:"Easy",   ds:["LinkedList"],             tip:"Traverse, compare node.val == key, increment counter."},
+      {name:"Detect cycle",                     diff:"Easy",   ds:["HashSet"],                tip:"HashSet of visited nodes (easy). Or Floyd's slow/fast pointer (O(1) space)."},
+      {name:"Intersection point",               diff:"Easy",   ds:["HashSet"],                tip:"Put all nodes of list A in HashSet; traverse B until a node is found in the set."},
+      {name:"Merge two sorted lists",           diff:"Easy",   ds:["LinkedList"],             tip:"Dummy head + two pointers — pick smaller node each step."},
+      {name:"Find middle node",                 diff:"Easy",   ds:["LinkedList"],             tip:"Slow/fast pointer — fast moves 2, slow moves 1. Slow stops at middle."},
+      {name:"Palindrome linked list",           diff:"Easy",   ds:["ArrayList"],              tip:"Copy values to ArrayList, two-pointer compare. Or reverse second half in-place."},
+      {name:"Remove duplicates (sorted)",       diff:"Easy",   ds:["LinkedList"],             tip:"curr.next = curr.next.next when curr.val == curr.next.val."},
+      {name:"Reverse linked list",              diff:"Easy",   ds:["LinkedList"],             tip:"Three pointers (prev, curr, next) — iterative O(n) O(1)."},
+      {name:"Update value in DLL",              diff:"Easy",   ds:["LinkedList"],             tip:"Traverse to index, update node.data. Use dummy head for cleaner code."},
+      {name:"Add two numbers",                  diff:"Medium", ds:["LinkedList"],             tip:"Traverse both lists simultaneously, carry forward extra digit."},
+      {name:"Delete at position (circular)",    diff:"Medium", ds:["LinkedList"],             tip:"Track prev and curr pointers; relink prev.next = curr.next."},
+      {name:"Remove duplicates (unsorted)",     diff:"Medium", ds:["HashSet"],                tip:"HashSet of seen values; unlink node if already seen."},
+      {name:"Remove every k-th node",           diff:"Medium", ds:["LinkedList"],             tip:"Counter pointer — every time count == k, unlink and reset counter."},
+      {name:"Delete nodes with prefix",         diff:"Medium", ds:["HashSet"],                tip:"Put all prefix-matching values in HashSet, unlink nodes whose val is in the set."},
+      {name:"Segregate odd-even nodes",         diff:"Medium", ds:["LinkedList"],             tip:"Two chains (odd-head, even-head), link even chain after odd chain at end."},
+      {name:"Remove nodes with even sum",       diff:"Medium", ds:["LinkedList"],             tip:"Suffix sum pass: from tail compute running sum, unlink nodes where sum is even."},
+      {name:"Clone linked list",                diff:"Medium", ds:["HashMap"],                tip:"HashMap<Node, Node> — original → clone. Two passes: create clones, then set next/random."},
+      {name:"Flatten linked list",              diff:"Medium", ds:["LinkedList"],             tip:"Recursively merge child lists using merge-two-sorted-lists logic."},
+      {name:"Reverse in k-groups",              diff:"Hard",   ds:["LinkedList"],             tip:"Iteratively reverse k nodes at a time using three pointers; link groups together."},
+    ]
+  },
+  {
+    id:"stack-queue", label:"Stack & Queue", icon:"📚",
+    iconBg:"rgba(251,146,60,0.18)",
+    problems:[
+      {name:"Stack (array & linked list)",      diff:"Easy",   ds:["ArrayDeque"],             tip:"Use ArrayDeque<Integer> as stack: push() / pop() / peek()."},
+      {name:"Queue (array & linked list)",      diff:"Easy",   ds:["ArrayDeque"],             tip:"Use ArrayDeque<Integer> as queue: offer() / poll() / peek()."},
+      {name:"Circular queue",                   diff:"Easy",   ds:["int[]"],                  tip:"int[] with head/tail pointers and size counter — mod arithmetic for wraparound."},
+      {name:"Reverse string using stack",       diff:"Easy",   ds:["ArrayDeque"],             tip:"Push all chars, pop into new string."},
+      {name:"Valid parentheses",                diff:"Easy",   ds:["ArrayDeque"],             tip:"Push open brackets; on close bracket pop and verify match."},
+      {name:"Queue using stack",                diff:"Easy",   ds:["ArrayDeque"],             tip:"Two stacks s1 (push) and s2 (pop). Transfer s1→s2 lazily on dequeue."},
+      {name:"Stack using queue",                diff:"Easy",   ds:["ArrayDeque"],             tip:"After enqueue, rotate queue so new element is at front."},
+      {name:"Two stacks in one array",          diff:"Easy",   ds:["int[]"],                  tip:"Stack1 grows from left (top1++), Stack2 from right (top2--). Overflow when top1+1==top2."},
+      {name:"Infix / postfix / prefix conversion",diff:"Medium",ds:["ArrayDeque"],           tip:"Stack for operators; precedence table controls push/pop. Two-stack for evaluation."},
+      {name:"Next greater element",             diff:"Medium", ds:["ArrayDeque"],             tip:"Monotonic stack (decreasing): pop when current > top, that top's answer = current."},
+      {name:"Stock span",                       diff:"Medium", ds:["ArrayDeque"],             tip:"Monotonic stack stores (price, span) pairs. Pop smaller prices, accumulate span."},
+      {name:"Min stack",                        diff:"Medium", ds:["ArrayDeque"],             tip:"Two stacks: main stack + minStack. Push to minStack only if new val ≤ minStack top."},
+      {name:"First negative in window",         diff:"Medium", ds:["ArrayDeque"],             tip:"Deque stores indices of negative numbers. Remove front when out of window."},
+      {name:"Celebrity problem",                diff:"Medium", ds:["ArrayDeque"],             tip:"Elimination with stack: two candidates, eliminate one who knows the other, verify last candidate."},
+      {name:"Generate binary numbers 1–N",      diff:"Medium", ds:["ArrayDeque"],             tip:"BFS-style queue: enqueue '1'; for each dequeue, enqueue it+'0' and it+'1'."},
+      {name:"Sort a stack",                     diff:"Medium", ds:["ArrayDeque"],             tip:"Recursive: pop top, recursively sort rest, insert top in sorted position."},
+      {name:"Delete middle element of stack",   diff:"Medium", ds:["ArrayDeque"],             tip:"Recursion to depth n/2, skip that element during backtrack."},
+      {name:"Reverse first k elements of queue",diff:"Medium", ds:["ArrayDeque","Stack"],     tip:"Push first k to Stack, pop back to queue, then rotate remaining n-k elements."},
+      {name:"Sliding window maximum",           diff:"Hard",   ds:["ArrayDeque"],             tip:"Monotonic deque (decreasing). Remove from back if smaller than incoming; remove from front if out of window."},
+      {name:"Largest rectangle in histogram",   diff:"Hard",   ds:["ArrayDeque"],             tip:"Monotonic increasing stack of indices. On pop, compute area with current as right boundary."},
+      {name:"Trapping rainwater (stack)",       diff:"Hard",   ds:["ArrayDeque"],             tip:"Stack stores indices of bars. On larger bar, pop and compute trapped water between boundaries."},
+      {name:"N-stack implementation",           diff:"Hard",   ds:["int[]"],                  tip:"Three arrays: val[], next[], top[]. next[] acts as a free-list for available slots."},
+    ]
+  },
+  {
+    id:"sorting", label:"Searching & Sorting", icon:"⚡",
+    iconBg:"rgba(251,191,36,0.18)",
+    problems:[
+      {name:"Linear search",                    diff:"Easy",   ds:["int[]"],                  tip:"Sequential scan — O(n). Best for unsorted or small arrays."},
+      {name:"Binary search",                    diff:"Easy",   ds:["int[]"],                  tip:"lo/hi/mid pointers on sorted array — O(log n). Use Arrays.binarySearch() or implement manually."},
+      {name:"Bubble sort",                      diff:"Easy",   ds:["int[]"],                  tip:"Repeated adjacent swaps — O(n²). Early exit if no swap in a pass."},
+      {name:"Selection sort",                   diff:"Easy",   ds:["int[]"],                  tip:"Find min in unsorted portion, swap to front — O(n²), O(1) space."},
+      {name:"Insertion sort",                   diff:"Easy",   ds:["int[]"],                  tip:"Build sorted portion one element at a time — O(n²) worst, O(n) best."},
+      {name:"Merge sort",                       diff:"Medium", ds:["int[]","ArrayList"],       tip:"Divide and conquer — O(n log n). Needs O(n) extra space for merge step."},
+      {name:"Quick sort",                       diff:"Medium", ds:["int[]"],                  tip:"Partition around pivot — O(n log n) avg, O(n²) worst. Random pivot avoids worst case."},
+      {name:"Heap sort",                        diff:"Medium", ds:["PriorityQueue"],          tip:"Build max-heap with PriorityQueue or manual heapify, extract-max n times."},
+      {name:"Cyclic sort",                      diff:"Medium", ds:["int[]"],                  tip:"Each element belongs at index value-1. Swap until element is in correct position."},
+      {name:"Counting sort",                    diff:"Medium", ds:["int[]"],                  tip:"Frequency array of size (max-min+1). Rebuild from counts — O(n+k)."},
+      {name:"Bucket sort",                      diff:"Medium", ds:["ArrayList"],              tip:"Distribute into ArrayList buckets by value range, sort each bucket, concatenate."},
+    ]
+  },
+  {
+    id:"patterns", label:"Algorithmic Patterns", icon:"🧩",
+    iconBg:"rgba(96,165,250,0.18)",
+    problems:[
+      {name:"Prefix sum pattern",               diff:"Easy",   ds:["int[]"],                  tip:"prefix[i] = prefix[i-1] + arr[i]. Range sum = prefix[r] - prefix[l-1]."},
+      {name:"Binary search pattern",            diff:"Easy",   ds:["int[]"],                  tip:"Requires sorted input. Works on answer space too (e.g. 'find minimum capacity')."},
+      {name:"Frequency / hashing pattern",      diff:"Easy",   ds:["HashMap"],                tip:"HashMap<T, Integer> for generic types; int[26] for lowercase letters (faster)."},
+      {name:"Sliding window pattern",           diff:"Medium", ds:["HashMap","ArrayDeque"],   tip:"Expand right, shrink left on violation. HashMap for char frequency, Deque for max/min tracking."},
+      {name:"Two-pointer pattern",              diff:"Medium", ds:["int[]"],                  tip:"Sorted array or string — one from each end, converge toward answer."},
+      {name:"Bit manipulation pattern",         diff:"Medium", ds:["int[]"],                  tip:"XOR for finding missing/unique, AND/OR/SHIFT for flag ops. No extra DS needed."},
+    ]
+  },
+  {
+    id:"dp", label:"Dynamic Programming", icon:"🧠",
+    iconBg:"rgba(167,139,250,0.18)",
+    problems:[
+      {name:"House Robber",                     diff:"Medium", ds:["int[]"],                  tip:"dp[i] = max(dp[i-1], dp[i-2]+arr[i]). Optimize to two variables."},
+      {name:"Coin Change",                      diff:"Medium", ds:["int[]"],                  tip:"dp[amount] = min coins. dp[0]=0; fill bottom-up for each coin."},
+      {name:"Rod Cutting",                      diff:"Medium", ds:["int[]"],                  tip:"Unbounded knapsack variant. dp[len] = max revenue over all cut positions."},
+      {name:"LCS (DP)",                         diff:"Medium", ds:["int[][]"],                tip:"dp[i][j]: longest common subsequence of s1[0..i] and s2[0..j]."},
+      {name:"Longest Palindromic Subsequence",  diff:"Medium", ds:["int[][]"],                tip:"dp[i][j]: LPS of s[i..j]. Base: single chars = 1. Build outward."},
+      {name:"Knapsack (0/1)",                   diff:"Medium", ds:["int[][]"],                tip:"dp[i][w]: max value with i items and capacity w. Include or exclude item i."},
+      {name:"Shortest Palindrome (KMP+DP)",     diff:"Hard",   ds:["int[]"],                  tip:"Find longest palindromic prefix via KMP failure function, prepend the rest reversed."},
+    ]
+  },
+];
+
+const DIFF_ORDER = { Easy: 0, Medium: 1, Hard: 2 };
+
+let activeTopic = "all";
+let activeDS    = "all";
+let activeDiff  = "all";
+let searchQ     = "";
+
+/* ── Build DS list ── */
+const allDS = [...new Set(TOPICS.flatMap(t => t.problems.flatMap(p => p.ds)))].sort();
+
+/* ── Badge helpers ── */
+function diffBadge(d) {
+  const cls = d === "Hard" ? "badge-hard" : d === "Medium" ? "badge-med" : "badge-easy";
+  return `<span class="badge ${cls}">${d}</span>`;
+}
+
+function dsBadges(dsArr) {
+  return dsArr.map(ds => {
+    const color = DS_COLOR[ds] || "#94a3b8";
+    const bg    = color + "22";
+    return `<span class="badge" style="background:${bg};color:${color};border-radius:100px">${ds}</span>`;
+  }).join('');
+}
+
+/* ── Filter logic ── */
+function matchesProblem(p) {
+  const dsOk   = activeDS   === "all" || p.ds.includes(activeDS);
+  const diffOk = activeDiff === "all" || p.diff === activeDiff;
+  const sqOk   = !searchQ   || p.name.toLowerCase().includes(searchQ) || p.tip.toLowerCase().includes(searchQ);
+  return dsOk && diffOk && sqOk;
+}
+
+/* ── Render ── */
+function render() {
+  const container = document.getElementById('main-content');
+  let totalVisible = 0;
+
+  const html = TOPICS
+    .filter(t => activeTopic === "all" || t.id === activeTopic)
+    .map(topic => {
+      const filtered = topic.problems.filter(matchesProblem);
+      if (!filtered.length) return '';
+
+      const byDiff = { Easy: [], Medium: [], Hard: [] };
+      filtered.forEach(p => byDiff[p.diff].push(p));
+
+      const diffGroups = ['Easy','Medium','Hard'].map(diff => {
+        const probs = byDiff[diff];
+        if (!probs.length) return '';
+        const cls = diff.toLowerCase() === 'easy' ? 'easy' : diff.toLowerCase() === 'medium' ? 'med' : 'hard';
+        const cards = probs.map(p => `
+          <div class="card">
+            <div class="card-name">${p.name}</div>
+            <div class="card-meta">${diffBadge(p.diff)} ${dsBadges(p.ds)}</div>
+            <div class="card-tip">${p.tip}</div>
+          </div>
+        `).join('');
+        return `
+          <div class="diff-group">
+            <div class="diff-group-label ${cls}">${diff}</div>
+            <div class="cards-grid">${cards}</div>
+          </div>
+        `;
+      }).join('');
+
+      totalVisible += filtered.length;
+
+      return `
+        <div class="topic-section" id="sec-${topic.id}">
+          <div class="topic-header">
+            <div class="topic-icon" style="background:${topic.iconBg}">${topic.icon}</div>
+            <div class="topic-title">${topic.label}</div>
+            <div class="topic-count">${filtered.length} problems</div>
+          </div>
+          ${diffGroups}
+        </div>
+      `;
+    }).join('');
+
+  container.innerHTML = html;
+  document.getElementById('no-result').style.display = totalVisible === 0 ? 'block' : 'none';
+}
+
+/* ── Topic filter buttons ── */
+function renderTopicFilters() {
+  const bar  = document.getElementById('topic-filters');
+  const opts = [{ id:"all", label:"All topics" }, ...TOPICS.map(t => ({ id: t.id, label: t.label }))];
+  bar.innerHTML = opts.map(o =>
+    `<button class="filter-btn ${activeTopic===o.id?'active':''}" onclick="setTopic('${o.id}')">${o.label}</button>`
+  ).join('');
+}
+
+function setTopic(id) { activeTopic = id; renderTopicFilters(); render(); }
+
+/* ── DS filter buttons ── */
+function renderDSFilters() {
+  const bar = document.getElementById('ds-filters');
+  bar.innerHTML = [
+    `<button class="filter-btn ${activeDS==='all'?'active':''}" onclick="setDS('all')">All</button>`,
+    ...allDS.map(ds => {
+      const color = DS_COLOR[ds] || "#94a3b8";
+      const isActive = activeDS === ds;
+      const style = isActive ? `background:${color}22;border-color:${color};color:${color}` : '';
+      return `<button class="filter-btn" style="${style}" onclick="setDS('${ds}')">${ds}</button>`;
+    })
+  ].join('');
+}
+
+function setDS(ds) { activeDS = ds; renderDSFilters(); render(); }
+
+/* ── Diff filter buttons ── */
+function renderDiffFilters() {
+  const bar  = document.getElementById('diff-filters');
+  const opts = [
+    { v:"all",   label:"All",    cls:"" },
+    { v:"Easy",  label:"Easy",   cls:"active-easy" },
+    { v:"Medium",label:"Medium", cls:"active-med"  },
+    { v:"Hard",  label:"Hard",   cls:"active-hard" },
+  ];
+  bar.innerHTML = opts.map(o =>
+    `<button class="filter-btn diff-btn ${activeDiff===o.v?o.cls:''}" onclick="setDiff('${o.v}')">${o.label}</button>`
+  ).join('');
+}
+
+function setDiff(d) { activeDiff = d; renderDiffFilters(); render(); }
+
+/* ── Search ── */
+document.getElementById('search').addEventListener('input', function() {
+  searchQ = this.value.trim().toLowerCase();
+  render();
+});
+
+/* ── Init ── */
+renderTopicFilters();
+renderDSFilters();
+renderDiffFilters();
+render();
+</script>
+</body>
+</html>
