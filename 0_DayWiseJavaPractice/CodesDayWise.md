@@ -99,21 +99,21 @@
 
 # Day 1 - ( Patterns Only )
 # Day 2
-- [ ] Check if a Number Is Positive, Negative, or Zero
-- [ ] Find the Largest of Three Numbers
-- [ ] Check if a Year Is a Leap Year
-- [ ] Check if a Character Is a Vowel or Consonant
-- [ ] Find if a Triangle Is Valid Based on Angles or Sides
-- [ ] Check for a Vowel or Consonant Using Switch-Case
-- [ ] Perform Unit Conversion (e.g., Cm to M, Kg to G)
-- [ ] Check for Uppercase, Lowercase, or Special Character
-- [ ] Find the Sum of the First N Natural Numbers
-- [ ] Check if a Number Is Prime
-- [ ] Check if a Number Is a Palindrome
-- [ ] Check if a Number Is an Armstrong Number
-- [ ] Calculate the Gcd and Lcm of Two Numbers
+- [x] Check if a Number Is Positive, Negative, or Zero
+- [x] Find the Largest of Three Numbers
+- [x] Check if a Year Is a Leap Year
+- [x] Check if a Character Is a Vowel or Consonant
+- [x] Find if a Triangle Is Valid Based on Angles or Sides
+- [x] Check for a Vowel or Consonant Using Switch-Case
+- [x] Perform Unit Conversion (e.g., Cm to M, Kg to G)
+- [x] Check for Uppercase, Lowercase, or Special Character
+- [x] Find the Sum of the First N Natural Numbers
+- [x] Check if a Number Is Prime
+- [x] Check if a Number Is a Palindrome
+- [x] Check if a Number Is an Armstrong Number
+- [x] Calculate the Gcd and Lcm of Two Numbers
+- [x] Generate All Prime Numbers Between 1 and N
 - [ ] Find Integers A, B Such That N = A³ × B, Where B Is Cube-Free
-- [ ] Generate All Prime Numbers Between 1 and N
 
 # Day 3
 - [ ] Find the Factorial of a Number

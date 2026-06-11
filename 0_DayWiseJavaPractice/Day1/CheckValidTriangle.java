@@ -1,0 +1,20 @@
+public class CheckValidTriangle {    
+    public static boolean check(int angle1, int angle2, int angle3) {
+        return (angle1 + angle2 + angle3 == 180) && (angle1 > 0 && angle2 > 0 && angle3 > 0);
+    }
+    
+    public static boolean checkSides(int side1, int side2, int side3) {
+        return (side1 + side2 > side3) && 
+               (side1 + side3 > side2) && 
+               (side2 + side3 > side1) &&
+               (side1 > 0 && side2 > 0 && side3 > 0);
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(check(60, 60, 60));   // true
+        System.out.println(check(100, 50, 20));  // false
+        
+        System.out.println(checkSides(3, 4, 5));       // true
+        System.out.println(checkSides(1, 2, 10));      // false
+    }
+}
