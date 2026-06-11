@@ -16,22 +16,24 @@ This repository is designed for:
 - Concept revision for interviews and exams
 
 ## Topics to Cover
+- [About](#about)
+- [Topics to Cover](#topics-to-cover)
 - [Progress Tracker](#progress-tracker)
-  - [Arrays](#arrays)
-  - [Matrix](#matrix)
-  - [Strings](#strings)
-  - [Linked List](#linked-list)
-  - [Stack \& Queue](#stack--queue)
-  - [Searching \& Sorting](#searching--sorting)
-  - [Algorithmic Patterns](#algorithmic-patterns)
-  - [Dynamic Programming](#dynamic-programming)
-  - [Advanced Algorithms](#advanced-algorithms)
-  - [How to Use](#how-to-use)
-  - [Resources](#resources)
-  - [License](#license)
+- [Arrays](#arrays)
+- [Matrix](#matrix)
+- [Strings](#strings)
+- [Linked List](#linked-list)
+- [Stack \& Queue](#stack--queue)
+- [Searching \& Sorting](#searching--sorting)
+- [Algorithmic Patterns](#algorithmic-patterns)
+- [Dynamic Programming](#dynamic-programming)
+- [Advanced Algorithms](#advanced-algorithms)
+- [How to Use](#how-to-use)
+- [Resources](#resources)
+- [License](#license)
 
 
-# Progress Tracker
+## Progress Tracker
 
 ## Arrays
 - [ ] Find largest element in array
