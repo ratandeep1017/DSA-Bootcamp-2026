@@ -1,24 +1,27 @@
 ## 1. Basic Math / Number Theory
-- Check if a Number Is Positive, Negative, or Zero  
-- Find the Largest of Three Numbers  
-- Check if a Year Is a Leap Year  
-- Find if a Triangle Is Valid Based on Angles or Sides  
-- Perform Unit Conversion (e.g., Cm to M, Kg to G)  
-- Find the Sum of the First N Natural Numbers  
-- Check if a Number Is Prime  
-- Check if a Number Is a Palindrome  
-- Check if a Number Is an Armstrong Number  
-- Calculate the Gcd and Lcm of Two Numbers  
-- Find Integers A, B Such That N = A³ × B, Where B Is Cube-Free  
-- Generate All Prime Numbers Between 1 and N  
-- Find the Factorial of a Number  
-- Find the Sum of Natural Numbers  
-- Find the Sum of Digits of a Number  
+- [x] Check if a Number Is Positive, Negative, or Zero  
+- [x] Find the Largest of Three Numbers  
+- [x] Check if a Year Is a Leap Year  
+- [x] Find if a Triangle Is Valid Based on Angles or Sides  
+- [x] Perform Unit Conversion (e.g., Cm to M, Kg to G)  
+- [x] Find the Sum of the First N Natural Numbers  
+- [x] Check if a Number Is Prime  
+- [x] Check if a Number Is a Palindrome  
+- [x] Check if a Number Is an Armstrong Number  
+- [x] Calculate the Gcd and Lcm of Two Numbers  
+- [x] Generate All Prime Numbers Between 1 and N  
+- [x] Find the Factorial of a Number  
+- [x] Find the Sum of Natural Numbers  
+- [x] Find the Sum of Digits of any Number  
+- [ ] **Find Integers A, B Such That N = A³ × B, Where B Is Cube-Free  **
 
 ## 2. Conditionals / Characters / Switch
 - Check if a Character Is a Vowel or Consonant  
 - Check for a Vowel or Consonant Using Switch-Case  
-- Check for Uppercase, Lowercase, or Special Character  
+- Check for Uppercase, Lowercase, or Special Character 
+- Reverse a String  
+- Check Whether a String Is Palindrome or Not  
+- Find Duplicate Characters in a String  
 
 ## 3. Recursion
 - Find the Power of Two Using Recursion  
@@ -89,9 +92,7 @@
 - Perform Spiral Traversal of a Matrix  
 
 ## 11. Strings
-- Reverse a String  
-- Check Whether a String Is Palindrome or Not  
-- Find Duplicate Characters in a String  
+ 
 
 ---
 ---
