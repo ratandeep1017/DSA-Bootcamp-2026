@@ -3,6 +3,12 @@ import java.util.ArrayList;
 public class ReverseString {
     public static void main(String[] args) {
         String str = "Hello Ratan How Are You";
+        
+        //! MOST SIMPLE METHOD USING FOR LOOP
+        String revers = "";
+        for (int i = str.length()-1; i >= 0; i--) revers += str.charAt(i);
+        System.out.println("Original: " + str);
+        System.out.println("Reverse string   : " + revers);
 
         //!NO LOOP + STRING BUILDER FUNCTION + REVERSE FUNCTION
         StringBuilder reve = new StringBuilder(str).reverse();

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class VowelOrConsonants {
+public class VowelConsonantsSpecialcharDigits {
     public static void main(String[] args) {
         String str = "Hello, Ratan! How Are You? 1920";
         ArrayList<Character> vowels = new ArrayList<>();
