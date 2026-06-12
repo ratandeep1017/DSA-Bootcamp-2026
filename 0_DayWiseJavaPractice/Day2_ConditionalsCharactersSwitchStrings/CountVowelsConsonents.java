@@ -1,30 +1,26 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CountVowelsConsonents {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a String: ");
-        String ch = sc.nextLine().toLowerCase();
-        int count = 0;
+        String str = sc.nextLine().toLowerCase();
 
-        for (int i = 0; i < ch.length(); i++) {
-            char c = ch.charAt(i);
+        ArrayList<Character> vowels = new ArrayList<>();
+        ArrayList<Character> consonants = new ArrayList<>();
+
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
             if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
-                count++;
+                vowels.add(c);
+            else if (Character.isLetter(c)) consonants.add(c);
         }
 
-        System.out.println("Vowels: " + count);
-        System.out.println("Consonents: " + (26 - count));
+        System.out.println("vowels: " + vowels);
+        System.out.println("consonants: " + consonants);
+        System.out.println("Vowels: " + vowels.size());
+        System.out.println("Consonants: " + consonants.size());
         sc.close();
     }
 }
-//----------------------------------------------------------------
-//  switch (ch.charAt(i)) {
-//  case 'a':
-//  case 'e':
-//  case 'i':
-//  case 'o':
-//  case 'u':
-//      count++;
-//      break;
-// }

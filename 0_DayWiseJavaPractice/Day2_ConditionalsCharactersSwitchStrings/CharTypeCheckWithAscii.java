@@ -12,7 +12,6 @@ public class CharTypeCheckWithAscii {
             System.out.println("Lowercase Letter");
         else
             System.out.println("Special Character");
-
     }
 
     public static void main(String[] args) {

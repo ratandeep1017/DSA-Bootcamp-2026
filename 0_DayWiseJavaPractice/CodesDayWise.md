@@ -16,12 +16,12 @@
 - [ ] ***Find Integers A, B Such That N = A³ × B, Where B Is Cube-Free***
 
 ## 2. Conditionals / Characters / Switch
-- Check if a Character Is a Vowel or Consonant  
-- Check for a Vowel or Consonant Using Switch-Case  
-- Check for Uppercase, Lowercase, or Special Character 
-- Reverse a String  
-- Check Whether a String Is Palindrome or Not  
-- Find Duplicate Characters in a String  
+- [x] Check if a Character Is a Vowel or Consonant  
+- [x] Check for a Vowel or Consonant Using Switch-Case  
+- [x] Check for Uppercase, Lowercase, or Special Character 
+- [x] Reverse a String  
+- [x] Check Whether a String Is Palindrome or Not  
+- [ ] Find Duplicate Characters in a String  
 
 ## 3. Recursion
 - Find the Power of Two Using Recursion  
