@@ -21,7 +21,7 @@
 - [x] Check for Uppercase, Lowercase, or Special Character 
 - [x] Reverse a String  
 - [x] Check Whether a String Is Palindrome or Not  
-- [ ] Find Duplicate Characters in a String  
+- [x] Find Duplicate Characters in a String  
 
 ## 3. Recursion
 - Find the Power of Two Using Recursion  
