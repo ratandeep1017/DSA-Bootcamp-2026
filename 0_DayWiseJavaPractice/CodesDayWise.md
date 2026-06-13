@@ -73,14 +73,11 @@
 - [ ] Tower of Hanoi  
 - [ ] Josephus problem  
 
----
 
-## 4. Iteration / Loops (Simple Output)
+## 6. Arrays – Basics & Elementary Operations
 - [ ] Print Fibonacci Sequence
 - [ ] Print the Nth Term of Fibonacci Series
 - [ ] Print Numbers From 1 to N and N to 1 
-
-## 6. Arrays – Basics & Elementary Operations
 - [ ] Find the Second Largest Element in an Array  
 - [ ] Check if an Array Is Sorted  
 - [ ] Reverse an Array  
