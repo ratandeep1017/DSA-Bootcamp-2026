@@ -24,75 +24,71 @@
 - [x] Find Duplicate Characters in a String  
 
 ## 3. Recursion
-- Find the Power of Two Using Recursion  
-- Count the Digits in a Number Using Recursion  
-- Reverse a String Using Recursion  
-- Check if a String Is a Palindrome Using Recursion  
+- [ ] Find the Power of Two Using Recursion  
+- [ ] Count the Digits in a Number Using Recursion  
+- [ ] Reverse a String Using Recursion  
+- [ ] Check if a String Is a Palindrome Using Recursion  
 
 ## 4. Iteration / Loops (Simple Output)
-- Print Fibonacci Sequence  
-- Print the Nth Term of Fibonacci Series  
-- Print Numbers From 1 to N  
-- Print Numbers From N to 1  
-
-## 5. Searching (Binary Search)
-- Perform Binary Search   
+- [ ] Print Fibonacci Sequence
+- [ ] Print the Nth Term of Fibonacci Series
+- [ ] Print Numbers From 1 to N and N to 1 
 
 ## 6. Arrays – Basics & Elementary Operations
-- Find the Second Largest Element in an Array  
-- Check if an Array Is Sorted  
-- Reverse an Array  
-- Remove All the Duplicate Elements From an Array  
-- Left Rotate an Array by D Places  
-- Move All the Zeros to the End  
-- Find Leaders in an Array  
-- Find the Maximum Difference  
-- Find the Frequency in a Sorted Array  
+- [ ] Find the Second Largest Element in an Array  
+- [ ] Check if an Array Is Sorted  
+- [ ] Reverse an Array  
+- [ ] Remove All the Duplicate Elements From an Array  
+- [ ] Left Rotate an Array by D Places  
+- [ ] Move All the Zeros to the End  
+- [ ] Find Leaders in an Array  
+- [ ] Find the Maximum Difference  
+- [ ] Find the Frequency in a Sorted Array  
 
 ## 7. Arrays – Subarrays, Sliding Window, Prefix Sum
-- Find the Maximum Consecutive 1's in a Binary Array  
-- Find the Majority Element in an Array  
-- Find the Maximum Subarray Sum  
-- Find the Maximum or Minimum Sum of a Subarray of Size K  
-- Find a Subarray With a Given Sum Using the Sliding Window Technique  
-- Find the Maximum Length Even-Odd Subarray  
-- Find the Sum of Any Subarray Using the Prefix Sum Array  
-- Find the Equilibrium Point  
+- [ ] Find the Maximum Consecutive 1's in a Binary Array  
+- [ ] Find the Majority Element in an Array  
+- [ ] Find the Maximum Subarray Sum  
+- [ ] Find the Maximum or Minimum Sum of a Subarray of Size K
+- [ ] Find a Subarray With a Given Sum Using the Sliding Window Technique  
+- [ ] Find the Maximum Length Even-Odd Subarray  
+- [ ] Find the Sum of Any Subarray Using the Prefix Sum Array  
+- [ ] Find the Equilibrium Point  
 
 ## 8. Arrays – Two Pointers / Hashing / Misc Advanced
-- Sort an Array Which Consists of Only 0, 1, and 2 Without Using Sorting  
-- Find the Union and Intersection of Two Sorted Arrays  
-- Find All Pairs in an Array Whose Sum Is Equal to a Given Number  
-- Find All Elements That Appear More Than N/k Times in an Array  
-- Find Common Elements in 3 Sorted Arrays  
-- Solve the Chocolate Distribution Problem  
-- Rearrange Positive and Negative Integers Alternatively in an Array  
-- Create Another Array With the Product of All Elements Except the Ith Element  
-- Find a Peak Element in an Array  
-- Find if There Is a Pair With Sum X in a Sorted Array  
-- Find a Triplet in a Sorted Array  
-- Solve the Trapping Rain Water Problem  
-- Find the Best Time to Buy and Sell Stock  
+- [ ] Sort an Array Which Consists of Only 0, 1, and 2 Without Using Sorting  
+- [ ] Find the Union and Intersection of Two Sorted Arrays  
+- [ ] Find All Pairs in an Array Whose Sum Is Equal to a Given Number  
+- [ ] Find All Elements That Appear More Than N/k Times in an Array  
+- [ ] Find Common Elements in 3 Sorted Arrays  
+- [ ] Solve the Chocolate Distribution Problem  
+- [ ] Rearrange Positive and Negative Integers Alternatively in an Array  
+- [ ] Create Another Array With the Product of All Elements Except the Ith Element  
+- [ ] Find a Peak Element in an Array  
+- [ ] Find if There Is a Pair With Sum X in a Sorted Array  
+- [ ] Find a Triplet in a Sorted Array  
+- [ ] Solve the Trapping Rain Water Problem  
+- [ ] Find the Best Time to Buy and Sell Stock  
 
 ## 9. Bit Manipulation
-- Check if the Kth Bit Is Set  
-- Count Set Bits  
-- Check if a Number Is a Power of Two  
-- Find the Only Odd Occurring Number  
-- Find Two Odd Appearing Numbers  
-- Find the Missing Number in an Array  
-- Count the Number of Bits to Be Flipped to Convert a to B  
-- Find the Xor of Numbers From L to R  
+- [ ] Check if the Kth Bit Is Set  
+- [ ] Count Set Bits  
+- [ ] Check if a Number Is a Power of Two  
+- [ ] Find the Only Odd Occurring Number  
+- [ ] Find Two Odd Appearing Numbers  
+- [ ] Find the Missing Number in an Array  
+- [ ] Count the Number of Bits to Be Flipped to Convert a to B  
+- [ ] Find the Xor of Numbers From L to R  
 
  ## 10. Matrices (2D Arrays)
-- Print a Matrix in a Snake Pattern  
-- Print Boundary Elements of a Matrix  
-- Print the Transpose of a Matrix  
-- Rotate a Matrix by 90 Degrees  
-- Perform Spiral Traversal of a Matrix  
+- [ ] Print a Matrix in a Snake Pattern  
+- [ ] Print Boundary Elements of a Matrix  
+- [ ] Print the Transpose of a Matrix  
+- [ ] Rotate a Matrix by 90 Degrees  
+- [ ] Perform Spiral Traversal of a Matrix  
 
-## 11. Strings
- 
+## 11. Searching Sorting 
+- [ ] Perform Binary Search   
 
 ---
 ---
