@@ -3,13 +3,31 @@ public class FindminmaxOfThree {
         //!With using Math.max , Math.min function
         // int max = Math.max(a, Math.max(b, c));
         // int min = Math.min(a, Math.min(b, c));
-        
+
+        //!Using nested if else
+        // int max,min;
+        // if(a>b) {
+        //     if(a>c) max = a; else max = c;
+        // }else{
+        //     if(b>c) max = b; else max = c;
+        // }
+        // if(a<b) {
+        //     if(a<c) min = a; else min = c;
+        // }else{
+        //     if(b<c) min = b; else min = c;
+        // }
+
         //!Without using any function
-        int max = a, min = a;
-        if (b > max)max = b;
-        if (c > max)max = c;
-        if (b < min)min = b;
-        if (c < min)min = c;
+        // int max = a, min = a;
+        // if (b > max)max = b;
+        // if (c > max)max = c;
+
+        // if (b < min)min = b;
+        // if (c < min)min = c;
+
+        //! in a single line 
+        int max = (a>b) ? ((a>c) ? a: c) : ((b>c) ? b:c);
+        int min = (a<b) ? ((a<c) ? a: c) : ((b<c) ? b:c);
         System.out.println("Max: " + max + ", Min: " + min);
     }
 
