@@ -16,15 +16,14 @@
 - [ ] ***Find Integers A, B Such That N = A³ × B, Where B Is Cube-Free***
 
 ## 2. Conditionals / Characters / Switch
-- [x] Check if a Character Is a Vowel or Consonant  
-- [x] Check for a Vowel or Consonant Using Switch-Case  
+- [x] Count number of digits in a number
+- [x] Add each digit of a number in a Arraylist/array
+- [x] Given a point (x,y) - write a program to ﬁnd out its quadrant or axis or at the origin.
+- [x] Check if a Character Is a Vowel or Consonant    
 - [x] Check for Uppercase, Lowercase, or Special Character 
 - [x] Reverse a String  
 - [x] Check Whether a String Is Palindrome or Not  
 - [x] Find Duplicate Characters in a String  
-- [ ] Count number of digits in a number
-- [ ] Add each digit of a number in a Arraylist/array
-- [ ] Given a point (x, y), write a program to ﬁnd out if it lies in which quadrant and on which axis or at the origin.
 
 ## 3. Recursion
 ##### Basic Recursion Problems
@@ -76,11 +75,11 @@
 
 
 ## 6. Arrays – Basics & Elementary Operations
-- [ ] Print Fibonacci Sequence
-- [ ] Print the Nth Term of Fibonacci Series
-- [ ] Print Numbers From 1 to N and N to 1 
+- [x] Print Fibonacci Sequence
+- [x] Print the Nth Term of Fibonacci Series
+- [x] Print Numbers From 1 to N and N to 1 
 - [ ] Find the Second Largest Element in an Array  
-- [ ] Check if an Array Is Sorted  
+- [x] Check if an Array Is Sorted  
 - [ ] Reverse an Array  
 - [ ] Remove All the Duplicate Elements From an Array  
 - [ ] Left Rotate an Array by D Places  
