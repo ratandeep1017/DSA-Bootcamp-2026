@@ -24,8 +24,7 @@
 - [x] Find Duplicate Characters in a String  
 - [ ] Count number of digits in a number
 - [ ] Add each digit of a number in a Arraylist/array
-
----
+- [ ] Given a point (x, y), write a program to ﬁnd out if it lies in which quadrant and on which axis or at the origin.
 
 ## 3. Recursion
 ##### Basic Recursion Problems
