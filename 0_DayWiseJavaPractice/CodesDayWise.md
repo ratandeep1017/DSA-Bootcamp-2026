@@ -22,22 +22,24 @@
 - [x] Reverse a String  
 - [x] Check Whether a String Is Palindrome or Not  
 - [x] Find Duplicate Characters in a String  
+- [ ] Count number of digits in a number
+- [ ] Add each digit of a number in a Arraylist/array
 
 ---
 
 ## 3. Recursion
 ##### Basic Recursion Problems
-- [x] Find the Power of Two Using Recursion  
-- [x] Count the Digits in a Number Using Recursion  
-- [x] Reverse a String Using Recursion  
-- [x] Check if a String Is a Palindrome Using Recursion
-- [x] Factorial of a number  
-- [x] Fibonacci series (nth term / full series)  
-- [x] Sum of first \(n\) natural numbers  
-- [x] Sum of digits of a number  
-- [x] Product of digits of a number  
-- [x] Find GCD (HCF) using recursion  
-- [x] Binary search using recursion  
+- [ ] Find the Power of Two Using Recursion  
+- [ ] Count the Digits in a Number Using Recursion  
+- [ ] Reverse a String Using Recursion  
+- [ ] Check if a String Is a Palindrome Using Recursion
+- [ ] Factorial of a number  
+- [ ] Fibonacci series (nth term / full series)  
+- [ ] Sum of first \(n\) natural numbers  
+- [ ] Sum of digits of a number  
+- [ ] Product of digits of a number  
+- [ ] Find GCD (HCF) using recursion  
+- [ ] Binary search using recursion  
 - [ ] Print numbers from \(n\) to 1 and 1 to \(n\)  
 - [ ] Calculate \(a^b\) using optimized recursion (fast exponentiation)  
 ##### String-Based Recursion
