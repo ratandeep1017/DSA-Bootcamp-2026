@@ -35,20 +35,17 @@
 - [x] Move All the Zeros to the End  
 - [x] Find Leaders in an Array  
 - [x] Find the Frequency in a Sorted and Unsorted Array 
-- [ ] Find the Maximum Difference (❌)
-- [ ] Left Rotate an Array by D Places (❌)
 
 ## 4. Arrays – Subarrays, Sliding Window, Prefix Sum
 - [ ] Find the Maximum Consecutive 1's in a Binary Array  
 - [ ] Find the Majority Element in an Array  
 - [ ] Find the Maximum Subarray Sum (Kadane)
-- [ ] Sliding window (subarray sum)
-- [ ] Even-odd subarray
-- [ ] Prefix sum
+- [ ] Find the Maximum Difference 
+- [ ] Left Rotate an Array by D Places 
 - [ ] Find the Maximum or Minimum Sum of a Subarray of Size K
-- [ ] Find a Subarray With a Given Sum Using the Sliding Window Technique  
-- [ ] Find the Maximum Length Even-Odd Subarray  
-- [ ] Find the Sum of Any Subarray Using the Prefix Sum Array  
+- [ ] Find a **Subarray** With a Given Sum Using the **Sliding Window** Technique  
+- [ ] Find the Maximum Length **Even-Odd Subarray**  
+- [ ] Find the Sum of Any Subarray Using the **Prefix Sum** Array   
 - [ ] Find the Equilibrium Point  
 
 ## 5. Arrays – Two Pointers / Hashing / Misc Advanced
@@ -66,70 +63,23 @@
 - [ ] Solve the Trapping Rain Water Problem  
 - [ ] Find the Best Time to Buy and Sell Stock  
 
-## 6. Bit Manipulation
-- [ ] Check if the Kth Bit Is Set  
-- [ ] Count Set Bits  
-- [ ] Check if a Number Is a Power of Two  
-- [ ] Find the Only Odd Occurring Number  
-- [ ] Find Two Odd Appearing Numbers  
-- [ ] Find the Missing Number in an Array  
-- [ ] Count the Number of Bits to Be Flipped to Convert a to B  
-- [ ] Find the Xor of Numbers From L to R  
-
-## 7. Matrices (2D Arrays)
+## 6. Matrices (2D Arrays)
 - [ ] Print a Matrix in a Snake Pattern  
 - [ ] Print Boundary Elements of a Matrix  
 - [ ] Print the Transpose of a Matrix  
 - [ ] Rotate a Matrix by 90 Degrees  
 - [ ] Perform Spiral Traversal of a Matrix  
 
-## 8. Searching Sorting 
-- [ ] Perform Binary Search   
-
-
-## 9. Recursion
-##### Basic Recursion Problems
-- [ ] Find the Power of Two Using Recursion  
-- [ ] Count the Digits in a Number Using Recursion  
-- [ ] Reverse a String Using Recursion  
-- [ ] Check if a String Is a Palindrome Using Recursion
-- [ ] Factorial of a number  
-- [ ] Fibonacci series (nth term / full series)  
-- [ ] Sum of first \(n\) natural numbers  
-- [ ] Sum of digits of a number  
-- [ ] Product of digits of a number  
-- [ ] Find GCD (HCF) using recursion  
-- [ ] Binary search using recursion  
-- [ ] Print numbers from \(n\) to 1 and 1 to \(n\)  
-- [ ] Calculate \(a^b\) using optimized recursion (fast exponentiation)  
-##### String-Based Recursion
-- [ ] Remove all occurrences of a character from a string  
-- [ ] Replace all occurrences of a substring  
-- [ ] Remove consecutive duplicate characters  
-- [ ] Move all 'x' to the end of the string  
-- [ ] Generate all substrings of a string  
-- [ ] Generate all permutations of a string  
-- [ ] Print all subsequences of a string  : **Output**: "", "a", "b", "c", "ab", "ac", "bc", "abc"
-##### Array-Based Recursion
-- [ ] Check if an array is sorted  
-- [ ] Find maximum/minimum element in array  
-- [ ] Linear search using recursion  
-- [ ] Find all indices of a given element  
-- [ ] Reverse an array recursively  
-- [ ] Generate balanced parentheses  
+## 7. Searching & Sorting 
+- [ ] Linear **search**
+- [ ] Binary **search**
+- [ ] Bubble sort
+- [ ] Selection sort
+- [ ] Insertion sort
 - [ ] Merge sort
----
-##### Backtracking-Type (Very Important)
-- [ ] Generate all subsets (power set)  
-- [ ] Combination sum problem  
-- [ ] N-Queens problem  
-- [ ] Rat in a maze problem  
-- [ ] Sudoku solver  
-- [ ] Word search problem  
-##### Advanced / Interview Level
-- [ ] K-th symbol in grammar  
-- [ ] Letter combinations of a phone number  
-- [ ] Recursive stack problems (sort stack, reverse stack)  
-- [ ] Quick sort  
-- [ ] Tower of Hanoi  
-- [ ] Josephus problem  
+- [ ] Quick sort
+- [ ] Heap sort
+- [ ] Cyclic sort
+- [ ] Counting sort
+- [ ] Bucket sort
+- [ ] Comparison of sorting algorithms
