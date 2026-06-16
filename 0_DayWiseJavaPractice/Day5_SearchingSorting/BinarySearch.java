@@ -26,16 +26,13 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int[] sortedData = { 1, 3, 5, 7, 9, 11, 13 };
-
+    
         // LOGIC OF THIS CODE IS : if the target is found then return the index, 
         // else if the target is not found then return the index to be inserted
 
         int target = 8;
-        
         int foundIndex = binarySearch(sortedData, target);
-        
         if (foundIndex != -1) System.out.println("Binary search: found " + target + " at index " + foundIndex);
         else System.out.println("Binary search: " + target + " not found. Insert at index " + findInsertionPosition(sortedData, target));
-        
     }
 }
