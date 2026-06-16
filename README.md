@@ -36,14 +36,13 @@ This repository is designed for:
 ## Progress Tracker
 
 ## Arrays
-- [ ] Find largest element in array
-- [ ] Difference between first & last element
-- [ ] Delete the smallest element
-- [ ] Count frequency of elements
+- [x] Find largest element in array
+- [x] Difference between first & last element
+- [x] Delete the smallest element
+- [x] Count frequency of elements
 - [ ] Sum of array (range queries)
-- [ ] Leaders in an array
+- [x] Leaders in an array
 - [ ] Longest consecutive increasing subarray
-- [ ] Frequency sort
 - [ ] Dutch National Flag (0s, 1s, 2s)
 - [ ] Trapping Rainwater
 - [ ] Container With Most Water
@@ -63,9 +62,9 @@ This repository is designed for:
 - [ ] 
 
 ## Strings
-- [ ] Count vowels
-- [ ] Create username
-- [ ] Palindrome check
+- [x] Count vowels
+- [x] Create username
+- [x] Palindrome check
 - [ ] Pattern replacement
 - [ ] Remove duplicate characters
 - [ ] First non-repeating character
