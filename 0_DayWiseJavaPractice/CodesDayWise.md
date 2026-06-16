@@ -71,15 +71,21 @@
 - [ ] Perform Spiral Traversal of a Matrix  
 
 ## 7. Searching & Sorting 
-- [ ] Linear **search**
-- [ ] Binary **search**
-- [ ] Bubble sort
-- [ ] Selection sort
-- [ ] Insertion sort
-- [ ] Merge sort
-- [ ] Quick sort
-- [ ] Heap sort
+- [ ] Linear/Sequential **search**
+- [ ] Binary **search** (Sorted data)
+  - [ ] find correct position for the number 
+  - [ ] find first and last occurance 
+- [ ] Comparison of sorting algorithms
+- [ ] **Bubble sort** -> Best: O(n), Avg: O(n²), Worst: O(n²) 
+- [ ] **Insertion sort** -> Best: O(n), Avg: O(n²), Worst: O(n²) 
+- [ ] **Selection sort** -> Best: O(n²), Avg: O(n²), Worst: O(n²) 
+- [ ] **Merge sort** -> Best: O(n log n), Avg: O(n log n), Worst: O(n log n) 
+- [ ] **Quick sort** -> Best: O(n log n), Avg: O(n log n), Worst: O(n²) 
+- [ ] **Bucket sort** -> Best: O(n + k), Avg: O(n + k), Worst: O(n²) 
+- [ ] **Heap sort** -> Best: O(n log n), Avg: O(n log n), Worst: O(n log n) 
+---
 - [ ] Cyclic sort
 - [ ] Counting sort
-- [ ] Bucket sort
-- [ ] Comparison of sorting algorithms
+- [ ] Shell sort
+- [ ] Radix Sort
+- [ ] Tree sort
