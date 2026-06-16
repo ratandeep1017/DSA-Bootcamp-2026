@@ -15,7 +15,7 @@
 - [x] Find the Sum of Digits of any Number  
 - [ ] ***Find Integers A, B Such That N = A³ × B, Where B Is Cube-Free***
 
-## 2. Conditionals / Characters / Switch
+## 2. Conditionals / Characters / Switch / Strings
 - [x] Count number of digits in a number
 - [x] Add each digit of a number in a Arraylist/array
 - [x] Given a point (x,y) - write a program to ﬁnd out its quadrant or axis or at the origin.
@@ -71,15 +71,16 @@
 - [ ] Perform Spiral Traversal of a Matrix  
 
 ## 7. Searching & Sorting 
-- [ ] Linear/Sequential **search**
-- [ ] Binary **search** (Sorted data)
-  - [ ] find correct position for the number 
-  - [ ] find first and last occurance 
-- [ ] Comparison of sorting algorithms
-- [ ] **Bubble sort** -> Best: O(n), Avg: O(n²), Worst: O(n²) 
-- [ ] **Insertion sort** -> Best: O(n), Avg: O(n²), Worst: O(n²) 
-- [ ] **Selection sort** -> Best: O(n²), Avg: O(n²), Worst: O(n²) 
-- [ ] **Merge sort** -> Best: O(n log n), Avg: O(n log n), Worst: O(n log n) 
+- [x] Linear/Sequential **search**
+- [x] Binary **search** (Sorted data)
+  - [x] find correct position for the number 
+  - [x] find first and last occurance 
+- [x] Comparison of sorting algorithms
+- [x] **Bubble sort** -> Best: O(n), Avg: O(n²), Worst: O(n²) 
+- [x] **Insertion sort** -> Best: O(n), Avg: O(n²), Worst: O(n²) 
+- [x] **Selection sort** -> Best: O(n²), Avg: O(n²), Worst: O(n²) 
+- [x] **Merge sort** -> Best: O(n log n), Avg: O(n log n), Worst: O(n log n) 
+---
 - [ ] **Quick sort** -> Best: O(n log n), Avg: O(n log n), Worst: O(n²) 
 - [ ] **Bucket sort** -> Best: O(n + k), Avg: O(n + k), Worst: O(n²) 
 - [ ] **Heap sort** -> Best: O(n log n), Avg: O(n log n), Worst: O(n log n) 
