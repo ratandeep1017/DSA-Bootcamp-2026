@@ -31,6 +31,7 @@ public class BinarySearch {
         // else if the target is not found then return the index to be inserted
 
         int target = 8;
+        
         int foundIndex = binarySearch(sortedData, target);
         
         if (foundIndex != -1) System.out.println("Binary search: found " + target + " at index " + foundIndex);
