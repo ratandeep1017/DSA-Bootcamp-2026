@@ -40,8 +40,8 @@ This repository is designed for:
 - [x] Difference between first & last element
 - [x] Delete the smallest element
 - [x] Count frequency of elements
-- [ ] Sum of array (range queries)
 - [x] Leaders in an array
+- [ ] Sum of array (range queries)
 - [ ] Longest consecutive increasing subarray
 - [ ] Dutch National Flag (0s, 1s, 2s)
 - [ ] Trapping Rainwater
@@ -51,8 +51,7 @@ This repository is designed for:
 - [ ] Reverse each row of matrix
 - [ ] Boundary elements sum
 - [ ] Modify even rows (negate & swap)
-- [ ] Rotate matrix by 90°
-- [ ] Rotate matrix by 180°
+- [ ] Rotate matrix by 90° OR 180°
 - [ ] Spiral traversal
 - [ ] Matrix diagonal difference
 - [ ] Kadane’s Algorithm (Maximum Subarray Sum)

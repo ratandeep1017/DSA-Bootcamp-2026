@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class Main {
+public class ReverseString {
     public static void reverseWords(String str) {
         Stack<Character> stack = new Stack<>();
         for (char ch : str.toCharArray()) {
