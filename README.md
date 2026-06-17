@@ -46,6 +46,8 @@ This repository is designed for:
 - [ ] Dutch National Flag (0s, 1s, 2s)
 - [ ] Trapping Rainwater
 - [ ] Container With Most Water
+
+## Matrix
 - [ ] Maximum sum row in matrix (and discard it)
 - [ ] Insert row & column in matrix
 - [ ] Reverse each row of matrix
@@ -56,9 +58,6 @@ This repository is designed for:
 - [ ] Matrix diagonal difference
 - [ ] Kadane’s Algorithm (Maximum Subarray Sum)
 - [ ] Maximum Product Subarray
-
-## Matrix
-- [ ] 
 
 ## Strings
 - [x] Count vowels
