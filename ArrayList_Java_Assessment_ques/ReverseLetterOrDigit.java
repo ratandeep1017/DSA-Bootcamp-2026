@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class ReverseLetterOrDigit{
     public static void main(String[] args) {
-        String str = "a42b*c(32d$edg#132";
+        String str = "a42b*c**^@!32d$edg#132";
         ArrayList<Character> arr = new ArrayList<>();
         ArrayList<Character> arr2 = new ArrayList<>();
         for(int i=0; i<str.length(); i++){
