@@ -54,7 +54,7 @@ class Queue {
     }    
 }
 
-public class Main {
+public class QueueOperationsSum {
     public static void main(String[] args) {
         Queue q = new Queue();
         q.enqueue(10);
