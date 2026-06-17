@@ -24,7 +24,11 @@
 - [x] Reverse a String  
 - [x] Check Whether a String Is Palindrome or Not  
 - [x] Find Duplicate Characters in a String  
-
+- [ ] Find First Unique Character
+- [ ] Most FrequentChar
+- [ ] permutation
+- [ ] String Compression
+- [ ] String Expansion
 ## 3. Arrays – Basics & Elementary Operations
 - [x] Print Fibonacci Sequence and Nth Term of Fibonacci Series
 - [x] Print Numbers From 1 to N and N to 1 
@@ -35,8 +39,21 @@
 - [x] Move All the Zeros to the End  
 - [x] Find Leaders in an Array  
 - [x] Find the Frequency in a Sorted and Unsorted Array 
+- [x] find_delete_min_max
 
-## 4. Arrays – Subarrays, Sliding Window, Prefix Sum
+## 4. Matrices (2D Arrays)
+- [ ] Print a Matrix in a Snake Pattern  
+- [ ] Print Boundary Elements of a Matrix  
+- [ ] Print the Transpose of a Matrix  
+- [ ] Rotate a Matrix by 90 Degrees  
+- [ ] Perform Spiral Traversal of a Matrix  
+- [ ] Diagonal Sum
+- [ ] Max Min Row Sum
+- [ ] Max Row Sum Matrix
+- [ ] Negate Even Rows & everse Col
+- [ ] Rverse Row Col
+
+## 5. Arrays – Subarrays, Sliding Window, Prefix Sum
 - [ ] Find the Maximum Consecutive 1's in a Binary Array  
 - [ ] Find the Majority Element in an Array  
 - [ ] Find the Maximum Subarray Sum (Kadane)
@@ -48,7 +65,7 @@
 - [ ] Find the Sum of Any Subarray Using the **Prefix Sum** Array   
 - [ ] Find the Equilibrium Point  
 
-## 5. Arrays – Two Pointers / Hashing / Misc Advanced
+## 6. Arrays – Two Pointers / Hashing / Misc Advanced
 - [ ] Sort an Array Which Consists of Only 0, 1, and 2 Without Using Sorting  
 - [ ] Find the Union and Intersection of Two Sorted Arrays  
 - [ ] Find All Pairs in an Array Whose Sum Is Equal to a Given Number  
@@ -62,13 +79,6 @@
 - [ ] Find a Triplet in a Sorted Array  
 - [ ] Solve the Trapping Rain Water Problem  
 - [ ] Find the Best Time to Buy and Sell Stock  
-
-## 6. Matrices (2D Arrays)
-- [ ] Print a Matrix in a Snake Pattern  
-- [ ] Print Boundary Elements of a Matrix  
-- [ ] Print the Transpose of a Matrix  
-- [ ] Rotate a Matrix by 90 Degrees  
-- [ ] Perform Spiral Traversal of a Matrix  
 
 ## 7. Searching & Sorting 
 - [x] Linear/Sequential **search**
