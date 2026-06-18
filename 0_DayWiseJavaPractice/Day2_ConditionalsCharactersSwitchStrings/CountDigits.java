@@ -1,22 +1,22 @@
 
 public class CountDigits {
-    public static int count(int n) {
-        int count = 0;
+    public static void count(int n) {
+        int count = 0, sum = 0;
         if (n == 0) count = 1;
-        else {
-            if (n < 0) n = -n;
-            while (n > 0) {
+        if (n < 0) n = -n;
+        while (n != 0) {
                 count++;
-                n = n / 10;
+                sum += n%10;
+                n /= 10;
             }
+            System.out.println("Number of digits: " + count + ", SUM: " + sum);
         }
-        return count;
-    }
 
     public static void main(String[] args) {
-        System.out.println("Number of digits: " + count(19292));
-        System.out.println("Number of digits: " + count(34));
-        System.out.println("Number of digits: " + count(2));
-        System.out.println("Number of digits: " + count(123));
+        count(2);
+        count(34);
+        count(123);
+        count(19292);
+        count(-10);
     }
 }
