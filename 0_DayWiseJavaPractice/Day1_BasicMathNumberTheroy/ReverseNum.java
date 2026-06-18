@@ -1,12 +1,12 @@
 public class ReverseNum {
     public static void main(String[] args) {
-        int n = 1286;
-        int r = 0;
-        while (n != 0) {
-            r *= 10;
-            r += n % 10;
-            n /= 10;
+        int num = 1286;
+        int rev = 0;
+        while (num != 0) {
+            rev *= 10; 
+            rev += num % 10;
+            num /= 10;
         }
-        System.out.println(r);
+        System.out.println(rev);
     }
 }
