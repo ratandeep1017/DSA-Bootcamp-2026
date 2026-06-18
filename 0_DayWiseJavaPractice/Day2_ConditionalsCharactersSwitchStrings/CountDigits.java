@@ -9,7 +9,7 @@ public class CountDigits {
                 sum += n%10;
                 n /= 10;
             }
-            System.out.println("Number of digits: " + count + ", SUM: " + sum);
+        System.out.println("Number of digits: " + count + ", SUM: " + sum);
         }
 
     public static void main(String[] args) {
