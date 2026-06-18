@@ -14,6 +14,7 @@
 - [x] Find the Sum of Natural Numbers  
 - [x] Find the Sum of Digits of any Number  
 - [x] Reverse a Number
+- [x] A to the Power B
 - [ ] ***Find Integers A, B Such That N = A³ × B, Where B Is Cube-Free***
 
 ## 2. Conditionals / Characters / Switch / Strings
