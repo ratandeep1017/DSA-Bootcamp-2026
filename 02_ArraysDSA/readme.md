@@ -168,6 +168,7 @@ Instead of solving randomly:
 - [x] Find Leaders in an Array  
 - [x] Find the Frequency in a Sorted and Unsorted Array 
 - [x] find_delete_min_max
+- [x] Two sum and a target
 
 ## 5. Arrays – Subarrays, Sliding Window, Prefix Sum
 - [ ] Find the Maximum Consecutive 1's in a Binary Array  
