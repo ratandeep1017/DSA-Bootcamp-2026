@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NeetCode 150 Tracker — DSA Mastery</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg-base:       #0b0f1a;
+    --bg-layer:      #111827;
+    --glass-bg:      rgba(255,255,255,0.04);
+    --glass-border:  rgba(255,255,255,0.10);
+    --glass-hover:   rgba(255,255,255,0.08);
+    --accent-purple: #8b7cf8;
+    --accent-teal:   #34d399;
+    --accent-orange: #fb923c;
+    --text-primary:  #f0f4ff;
+    --text-secondary:#94a3b8;
+    --text-muted:    #475569;
+
+    --easy:    #22c55e;
+    --easy-bg: rgba(34,197,94,0.12);
+    --med:     #f59e0b;
+    --med-bg:  rgba(245,158,11,0.12);
+    --hard:    #ef4444;
+    --hard-bg: rgba(239,68,68,0.12);
+
+    --ds-hashmap:   #a78bfa;
+    --ds-hashset:   #34d399;
+    --ds-deque:     #fb923c;
+    --ds-list:      #60a5fa;
+    --ds-pq:        #fbbf24;
+    --ds-tree:      #4ade80;
+    --ds-linked:    #f472b6;
+    --ds-arr:       #94a3b8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(139,124,248,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 80%, rgba(52,211,153,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 40% at 60% 30%, rgba(251,146,60,0.06) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrap { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* ── Header ── */
+  header {
+    padding: 3rem 0 2rem;
+    text-align: center;
+  }
+
+  .header-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent-purple);
+    margin-bottom: .75rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  header h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #f0f4ff 30%, var(--accent-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: .75rem;
+  }
+
+  header p {
+    color: var(--text-secondary);
+    font-size: .95rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+
+  /* ── Progress Section ── */
+  .progress-section {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(20px);
+  }
+
+  .progress-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .progress-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .progress-card .label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: .5rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .progress-card .value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent-purple);
+    margin-bottom: .25rem;
+  }
+
+  .progress-card .unit {
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  .progress-bar-container {
+    background: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    height: 8px;
+    overflow: hidden;
+    margin-top: .5rem;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-teal));
+    border-radius: 8px;
+    transition: width .4s ease;
+  }
+
+  .difficulty-breakdown {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .diff-stat {
+    background: rgba(255,255,255,0.02);
+    border-radius: 8px;
+    padding: .75rem;
+    text-align: center;
+  }
+
+  .diff-stat.easy { border-left: 3px solid var(--easy); }
+  .diff-stat.med { border-left: 3px solid var(--med); }
+  .diff-stat.hard { border-left: 3px solid var(--hard); }
+
+  .diff-stat .count {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: .25rem;
+  }
+
+  .diff-stat .label {
+    font-size: 10px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ── Stats row ── */
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .stat-pill {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    padding: .35rem .9rem;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    backdrop-filter: blur(12px);
+  }
+
+  .stat-pill .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── Controls panel ── */
+  .controls {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .control-row {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+    flex-wrap: wrap;
+  }
+
+  .control-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    min-width: 64px;
+    padding-top: 5px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .btn-group { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .filter-btn {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1px solid var(--glass-border);
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all .18s ease;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .filter-btn:hover { background: var(--glass-hover); color: var(--text-primary); }
+
+  .filter-btn.active {
+    background: rgba(139,124,248,0.18);
+    border-color: var(--accent-purple);
+    color: var(--accent-purple);
+  }
+
+  .diff-btn.active-easy  { background: var(--easy-bg);  border-color: var(--easy);  color: var(--easy); }
+  .diff-btn.active-med   { background: var(--med-bg);   border-color: var(--med);   color: var(--med); }
+  .diff-btn.active-hard  { background: var(--hard-bg);  border-color: var(--hard);  color: var(--hard); }
+
+  /* ── Search ── */
+  .search-wrap {
+    position: relative;
+    max-width: 340px;
+  }
+
+  .search-wrap input {
+    width: 100%;
+    padding: 5px 10px 5px 28px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    color: var(--text-primary);
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    transition: all .18s ease;
+  }
+
+  .search-wrap input:focus {
+    outline: none;
+    background: rgba(255,255,255,0.10);
+    border-color: var(--accent-purple);
+  }
+
+  .search-wrap input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* ── Badges ── */
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    background: rgba(255,255,255,0.08);
+    color: var(--text-secondary);
+    border: 1px solid var(--glass-border);
+  }
+
+  .badge-easy {
+    background: var(--easy-bg);
+    color: var(--easy);
+    border-color: var(--easy);
+  }
+
+  .badge-med {
+    background: var(--med-bg);
+    color: var(--med);
+    border-color: var(--med);
+  }
+
+  .badge-hard {
+    background: var(--hard-bg);
+    color: var(--hard);
+    border-color: var(--hard);
+  }
+
+  /* ── Topic sections ── */
+  .topic-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .topic-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .topic-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .topic-title {
+    font-size: 20px;
+    font-weight: 600;
+    flex: 1;
+  }
+
+  .topic-count {
+    font-size: 12px;
+    color: var(--text-secondary);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    padding: 4px 10px;
+  }
+
+  /* ── Difficulty groups ── */
+  .diff-group {
+    margin-bottom: 2rem;
+  }
+
+  .diff-group-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding: .75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: inline-block;
+    background: var(--easy-bg);
+    color: var(--easy);
+  }
+
+  .diff-group-label.med {
+    background: var(--med-bg);
+    color: var(--med);
+  }
+
+  .diff-group-label.hard {
+    background: var(--hard-bg);
+    color: var(--hard);
+  }
+
+  /* ── Cards grid ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+  }
+
+  /* ── Card ── */
+  .card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 1rem;
+    backdrop-filter: blur(12px);
+    transition: all .2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+  }
+
+  .card:hover {
+    background: var(--glass-hover);
+    border-color: rgba(139,124,248,0.3);
+  }
+
+  .card.completed {
+    background: rgba(34,197,94,0.1);
+    border-color: rgba(34,197,94,0.3);
+  }
+
+  .card-checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+  }
+
+  .card-checkbox {
+    margin-top: 2px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-teal);
+    flex-shrink: 0;
+  }
+
+  .card-content {
+    flex: 1;
+  }
+
+  .card-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .card.completed .card-name {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+  }
+
+  .card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+
+  .card-tip {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    padding-top: .5rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .no-result {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-secondary);
+  }
+
+  .no-result p {
+    font-size: 16px;
+    margin-bottom: .5rem;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .btn-reset {
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.3);
+    color: #ef4444;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s ease;
+  }
+
+  .btn-reset:hover {
+    background: rgba(239,68,68,0.2);
+  }
+
+  .btn-export {
+    background: rgba(139,124,248,0.1);
+    border: 1px solid rgba(139,124,248,0.3);
+    color: var(--accent-purple);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s ease;
+  }
+
+  .btn-export:hover {
+    background: rgba(139,124,248,0.2);
+  }
+
+  .btn-reset:hover {
+    background: rgba(239,68,68,0.2);
+  }
+
+  @media (max-width: 768px) {
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+    .progress-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .difficulty-breakdown {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="header-eyebrow">Master Data Structures & Algorithms</div>
+    <h1>NeetCode 150 Tracker</h1>
+    <p>Track your progress through the complete NeetCode 150 problem set. Master each topic level by level.</p>
+  </header>
+
+  <!-- Progress Section -->
+  <section class="progress-section">
+    <div class="progress-grid">
+      <div class="progress-card">
+        <div class="label">Total Completed</div>
+        <div class="value" id="total-completed">0</div>
+        <div class="unit">/ <span id="total-problems">150</span> problems</div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progress-bar-main" style="width: 0%"></div>
+        </div>
+      </div>
+      <div class="progress-card">
+        <div class="label">Overall Progress</div>
+        <div class="value" id="completion-percentage">0%</div>
+        <div class="unit">Completion Rate</div>
+      </div>
+      <div class="progress-card">
+        <div class="label">Current Streak</div>
+        <div class="value" id="streak-count">0</div>
+        <div class="unit">Problems in a row</div>
+      </div>
+    </div>
+
+    <div class="difficulty-breakdown">
+      <div class="diff-stat easy">
+        <div class="count" id="easy-completed">0</div>
+        <div class="label">Easy Completed</div>
+      </div>
+      <div class="diff-stat med">
+        <div class="count" id="med-completed">0</div>
+        <div class="label">Medium Completed</div>
+      </div>
+      <div class="diff-stat hard">
+        <div class="count" id="hard-completed">0</div>
+        <div class="label">Hard Completed</div>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button class="btn-export" onclick="exportProgress()">📊 Export as File</button>
+      <button class="btn-export" onclick="saveToURL()">🔗 Save to URL</button>
+      <button class="btn-export" onclick="loadFromURL()">📥 Load from URL</button>
+      <button class="btn-reset" onclick="resetProgress()">🔄 Reset All</button>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="controls">
+    <div class="control-row">
+      <label class="control-label">Topics</label>
+      <div class="btn-group" id="topic-filters"></div>
+    </div>
+
+    <div class="control-row">
+      <label class="control-label">Difficulty</label>
+      <div class="btn-group" id="diff-filters"></div>
+    </div>
+
+    <div class="control-row">
+      <label class="control-label">Status</label>
+      <div class="btn-group" id="status-filters"></div>
+    </div>
+
+    <div class="control-row">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search" placeholder="Search problems...">
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section id="main-content"></section>
+  <div id="no-result" class="no-result" style="display:none;">
+    <p>No problems match your filters</p>
+  </div>
+
+</div>
+
+<script>
+  const DS_COLOR = {
+    "Array":     "#94a3b8",
+    "HashMap":   "#a78bfa",
+    "HashSet":   "#34d399",
+    "Stack":     "#fb923c",
+    "Queue":     "#f59e0b",
+    "Deque":     "#fb923c",
+    "LinkedList":"#f472b6",
+    "Tree":      "#4ade80",
+    "Graph":     "#60a5fa",
+    "Heap":      "#fbbf24",
+    "Trie":      "#34d399",
+    "String":    "#ec4899",
+    "Greedy":    "#10b981",
+    "DP":        "#8b7cf8",
+    "BFS":       "#06b6d4",
+    "DFS":       "#ec4899",
+  };
+
+  const NEETCODE_150 = [
+    {
+      id: "arrays",
+      label: "Arrays & Hashing",
+      icon: "📦",
+      iconBg: "rgba(148,163,184,0.18)",
+      problems: [
+        { id: "1", name: "Contains Duplicate", diff: "Easy", ds: ["Array", "HashSet"], tip: "Use HashSet to track seen values. Return true if duplicate found." },
+        { id: "2", name: "Valid Anagram", diff: "Easy", ds: ["String", "HashMap"], tip: "Count character frequency or sort both strings." },
+        { id: "3", name: "Two Sum", diff: "Easy", ds: ["Array", "HashMap"], tip: "HashMap: store value→index, check if complement exists." },
+        { id: "4", name: "Group Anagrams", diff: "Medium", ds: ["HashMap", "String"], tip: "Sort each word, use sorted string as key in HashMap." },
+        { id: "5", name: "Top K Frequent Elements", diff: "Medium", ds: ["HashMap", "Heap"], tip: "HashMap for frequency, min-heap of size k for top k." },
+        { id: "6", name: "Encode and Decode Strings", diff: "Medium", ds: ["Array", "String"], tip: "Use length prefix: 'length#string' to encode." },
+        { id: "7", name: "Product of Array Except Self", diff: "Medium", ds: ["Array"], tip: "Two pass: left products, then right products." },
+        { id: "8", name: "Valid Sudoku", diff: "Medium", ds: ["Array", "HashSet"], tip: "Three HashSets: rows, cols, 3x3 boxes. Check on insert." },
+        { id: "9", name: "Longest Consecutive", diff: "Medium", ds: ["Array", "HashSet"], tip: "HashSet for O(1) lookup. Find sequence starts, skip duplicates." },
+      ]
+    },
+    {
+      id: "two-pointers",
+      label: "Two Pointers",
+      icon: "👈👉",
+      iconBg: "rgba(52,211,153,0.18)",
+      problems: [
+        { id: "10", name: "Valid Palindrome", diff: "Easy", ds: ["String", "Two Pointers"], tip: "Skip non-alphanumeric, compare chars. Case-insensitive." },
+        { id: "11", name: "Two Sum II (Sorted)", diff: "Medium", ds: ["Array", "Two Pointers"], tip: "Left and right pointers. Move toward center based on sum." },
+        { id: "12", name: "3Sum", diff: "Medium", ds: ["Array", "Two Pointers"], tip: "Sort array, fix one element, two-pointer on rest. Skip duplicates." },
+        { id: "13", name: "Container With Most Water", diff: "Medium", ds: ["Array", "Two Pointers"], tip: "Start at both ends, move inward to find larger height." },
+        { id: "14", name: "Trapping Rain Water", diff: "Hard", ds: ["Array", "Two Pointers"], tip: "Left/right max tracking. Water = min(leftMax, rightMax) - height." },
+      ]
+    },
+    {
+      id: "sliding-window",
+      label: "Sliding Window",
+      icon: "🪟",
+      iconBg: "rgba(251,146,60,0.18)",
+      problems: [
+        { id: "15", name: "Best Time to Buy and Sell Stock", diff: "Easy", ds: ["Array", "Sliding Window"], tip: "Track min price, update max profit as you iterate." },
+        { id: "16", name: "Longest Substring Without Repeating", diff: "Medium", ds: ["String", "Sliding Window", "HashMap"], tip: "Use HashMap for char→index. Shrink window if duplicate." },
+        { id: "17", name: "Longest Repeating Character Replacement", diff: "Medium", ds: ["String", "Sliding Window"], tip: "Track max freq in window. Expand if valid, shrink if not." },
+        { id: "18", name: "Permutation in String", diff: "Medium", ds: ["String", "Sliding Window"], tip: "Fixed-size window matching character frequency." },
+        { id: "19", name: "Minimum Window Substring", diff: "Hard", ds: ["String", "Sliding Window", "HashMap"], tip: "Expand to collect chars, shrink to minimize window." },
+        { id: "20", name: "Sliding Window Maximum", diff: "Hard", ds: ["Array", "Deque", "Sliding Window"], tip: "Monotonic decreasing deque. Remove front if out of window." },
+      ]
+    },
+    {
+      id: "stack",
+      label: "Stack",
+      icon: "📚",
+      iconBg: "rgba(96,165,250,0.18)",
+      problems: [
+        { id: "21", name: "Valid Parentheses", diff: "Easy", ds: ["String", "Stack"], tip: "Push opening, pop and match closing. Empty at end." },
+        { id: "22", name: "Evaluate Reverse Polish Notation", diff: "Medium", ds: ["String", "Stack"], tip: "Push operands, pop and compute on operator." },
+        { id: "23", name: "Generate Parentheses", diff: "Medium", ds: ["String", "Backtracking"], tip: "DFS/backtracking with open/close counters." },
+        { id: "24", name: "Daily Temperatures", diff: "Medium", ds: ["Array", "Stack"], tip: "Monotonic decreasing stack of indices." },
+        { id: "25", name: "Car Fleet", diff: "Medium", ds: ["Array", "Stack"], tip: "Sort by position, compute times. Stack tracks fleets." },
+        { id: "26", name: "Largest Rectangle in Histogram", diff: "Hard", ds: ["Array", "Stack"], tip: "Monotonic increasing stack. Pop and compute area." },
+      ]
+    },
+    {
+      id: "binary-search",
+      label: "Binary Search",
+      icon: "🔍",
+      iconBg: "rgba(139,124,248,0.18)",
+      problems: [
+        { id: "27", name: "Binary Search", diff: "Easy", ds: ["Array"], tip: "Classic binary search. Three pointers: lo, mid, hi." },
+        { id: "28", name: "Search a 2D Matrix", diff: "Medium", ds: ["Array"], tip: "Treat 2D matrix as 1D sorted array." },
+        { id: "29", name: "Koko Eating Bananas", diff: "Medium", ds: ["Array"], tip: "Binary search on answer space (eating speed)." },
+        { id: "30", name: "Find Minimum in Rotated Sorted Array", diff: "Medium", ds: ["Array"], tip: "Identify which half is sorted, search unsorted half." },
+        { id: "31", name: "Search in Rotated Sorted Array", diff: "Medium", ds: ["Array"], tip: "Find pivot, then binary search in correct half." },
+        { id: "32", name: "Time-Based Key-Value Store", diff: "Medium", ds: ["Array", "HashMap"], tip: "Binary search on timestamp list for each key." },
+        { id: "33", name: "Median of Two Sorted Arrays", diff: "Hard", ds: ["Array"], tip: "Binary search to partition array ensuring left size = right size." },
+      ]
+    },
+    {
+      id: "linked-list",
+      label: "Linked List",
+      icon: "⛓️",
+      iconBg: "rgba(244,114,182,0.18)",
+      problems: [
+        { id: "34", name: "Reverse Linked List", diff: "Easy", ds: ["LinkedList"], tip: "Three pointers: prev, curr, next. Reverse in-place." },
+        { id: "35", name: "Merge Two Sorted Lists", diff: "Easy", ds: ["LinkedList"], tip: "Compare nodes, append smaller, advance pointer." },
+        { id: "36", name: "Reorder List", diff: "Medium", ds: ["LinkedList"], tip: "Find middle, reverse second half, merge." },
+        { id: "37", name: "Remove Nth Node From End", diff: "Medium", ds: ["LinkedList"], tip: "Two pointers with n-node gap. Handle head removal." },
+        { id: "38", name: "Copy List with Random Pointer", diff: "Medium", ds: ["LinkedList", "HashMap"], tip: "Hash map for old→new node mapping." },
+        { id: "39", name: "Add Two Numbers", diff: "Medium", ds: ["LinkedList"], tip: "Traverse both, handle carry, create result node." },
+        { id: "40", name: "Find the Duplicate Number", diff: "Medium", ds: ["LinkedList"], tip: "Floyd's cycle detection. Treat array as linked list." },
+        { id: "41", name: "LRU Cache", diff: "Hard", ds: ["LinkedList", "HashMap"], tip: "Doubly linked list + HashMap for O(1) all ops." },
+        { id: "42", name: "Reverse Nodes in K-Group", diff: "Hard", ds: ["LinkedList"], tip: "Reverse each k-group iteratively." },
+      ]
+    },
+    {
+      id: "trees",
+      label: "Trees",
+      icon: "🌳",
+      iconBg: "rgba(74,222,128,0.18)",
+      problems: [
+        { id: "43", name: "Invert Binary Tree", diff: "Easy", ds: ["Tree"], tip: "Swap left/right children recursively." },
+        { id: "44", name: "Maximum Depth of Binary Tree", diff: "Easy", ds: ["Tree"], tip: "Recursion: 1 + max(left, right) depth." },
+        { id: "45", name: "Diameter of Binary Tree", diff: "Easy", ds: ["Tree"], tip: "DFS to find height, track max diameter." },
+        { id: "46", name: "Balanced Binary Tree", diff: "Easy", ds: ["Tree"], tip: "Check if height difference ≤ 1 for all nodes." },
+        { id: "47", name: "Same Tree", diff: "Easy", ds: ["Tree"], tip: "Recursive comparison of nodes." },
+        { id: "48", name: "Subtree of Another Tree", diff: "Easy", ds: ["Tree"], tip: "Find matching root, then check if subtrees are same." },
+        { id: "49", name: "Lowest Common Ancestor", diff: "Medium", ds: ["Tree"], tip: "Find first node where p and q are in different subtrees." },
+        { id: "50", name: "Binary Tree Level Order Traversal", diff: "Medium", ds: ["Tree", "Queue"], tip: "BFS with queue, capture level by queue size." },
+        { id: "51", name: "Binary Tree Right Side View", diff: "Medium", ds: ["Tree", "Queue"], tip: "BFS, capture rightmost node of each level." },
+        { id: "52", name: "Count Good Nodes in Binary Tree", diff: "Medium", ds: ["Tree"], tip: "DFS tracking max value seen so far on path." },
+        { id: "53", name: "Validate Binary Search Tree", diff: "Medium", ds: ["Tree"], tip: "DFS with min/max bounds for each node." },
+        { id: "54", name: "Kth Smallest Element in BST", diff: "Medium", ds: ["Tree"], tip: "In-order traversal is sorted. Return kth element." },
+        { id: "55", name: "Construct Binary Tree from Preorder and Inorder", diff: "Medium", ds: ["Tree"], tip: "Preorder[0] is root. Find in inorder, split left/right." },
+        { id: "56", name: "Binary Tree Maximum Path Sum", diff: "Hard", ds: ["Tree"], tip: "DFS returning max path ending at node, track global max." },
+        { id: "57", name: "Serialize and Deserialize Binary Tree", diff: "Hard", ds: ["Tree", "Queue"], tip: "Level-order traversal for serialization." },
+        { id: "58", name: "Vertical Order Traversal", diff: "Hard", ds: ["Tree", "HashMap"], tip: "BFS with (row, col) tracking, sort and output." },
+      ]
+    },
+    {
+      id: "tries",
+      label: "Tries",
+      icon: "🪓",
+      iconBg: "rgba(52,211,153,0.18)",
+      problems: [
+        { id: "59", name: "Implement Trie", diff: "Medium", ds: ["Trie"], tip: "Node with children map and isEnd flag." },
+        { id: "60", name: "Design Add and Search Word Data Structure", diff: "Medium", ds: ["Trie"], tip: "Trie with DFS for wildcard (.) matching." },
+        { id: "61", name: "Word Search II", diff: "Hard", ds: ["Trie"], tip: "Build trie, DFS on board with backtracking." },
+      ]
+    },
+    {
+      id: "backtracking",
+      label: "Backtracking",
+      icon: "↩️",
+      iconBg: "rgba(251,146,60,0.18)",
+      problems: [
+        { id: "62", name: "Subsets", diff: "Medium", ds: ["Backtracking"], tip: "Build power set. For each element, include/exclude." },
+        { id: "63", name: "Combination Sum", diff: "Medium", ds: ["Backtracking"], tip: "DFS with reusable elements. Avoid duplicates by starting index." },
+        { id: "64", name: "Permutations", diff: "Medium", ds: ["Backtracking"], tip: "DFS with used set to track taken elements." },
+        { id: "65", name: "N-Queens", diff: "Hard", ds: ["Backtracking"], tip: "DFS with sets for row, col, diagonal tracking." },
+        { id: "66", name: "Palindrome Partitioning", diff: "Medium", ds: ["Backtracking"], tip: "DFS partitioning at each palindromic substring." },
+      ]
+    },
+    {
+      id: "graphs",
+      label: "Graphs",
+      icon: "🕸️",
+      iconBg: "rgba(96,165,250,0.18)",
+      problems: [
+        { id: "67", name: "Number of Islands", diff: "Medium", ds: ["Graph", "DFS"], tip: "DFS/BFS to mark connected land. Count components." },
+        { id: "68", name: "Clone Graph", diff: "Medium", ds: ["Graph", "HashMap"], tip: "BFS/DFS with node→copy mapping." },
+        { id: "69", name: "Max Area of Island", diff: "Medium", ds: ["Graph", "DFS"], tip: "DFS returns area of island, track max." },
+        { id: "70", name: "Pacific Atlantic Water Flow", diff: "Medium", ds: ["Graph", "DFS"], tip: "DFS from borders, mark reachable cells. Find intersection." },
+        { id: "71", name: "Alien Dictionary", diff: "Hard", ds: ["Graph", "Topological Sort"], tip: "Build graph from sorted words, topological sort." },
+        { id: "72", name: "Course Schedule", diff: "Medium", ds: ["Graph", "Topological Sort"], tip: "Detect cycle in directed graph using DFS." },
+        { id: "73", name: "Course Schedule II", diff: "Medium", ds: ["Graph", "Topological Sort"], tip: "Topological sort on course graph." },
+        { id: "74", name: "Redundant Connection", diff: "Medium", ds: ["Graph", "Union-Find"], tip: "Union-Find to detect first cycle edge." },
+        { id: "75", name: "Graph Valid Tree", diff: "Medium", ds: ["Graph", "Union-Find"], tip: "Check n-1 edges and no cycles." },
+        { id: "76", name: "Number of Connected Components", diff: "Medium", ds: ["Graph", "Union-Find"], tip: "Union-Find to group components." },
+        { id: "77", name: "Word Ladder", diff: "Hard", ds: ["Graph", "BFS"], tip: "BFS on word transformation graph." },
+      ]
+    },
+    {
+      id: "heaps",
+      label: "Heaps",
+      icon: "⛰️",
+      iconBg: "rgba(251,191,36,0.18)",
+      problems: [
+        { id: "78", name: "Kth Largest Element in Stream", diff: "Easy", ds: ["Heap"], tip: "Min-heap of size k. Top element is kth largest." },
+        { id: "79", name: "Last Stone Weight", diff: "Easy", ds: ["Heap"], tip: "Max-heap (negate for min-heap). Smash stones." },
+        { id: "80", name: "K Closest Points to Origin", diff: "Medium", ds: ["Heap"], tip: "Min-heap by distance. Pop k times." },
+        { id: "81", name: "Reorganize String", diff: "Medium", ds: ["Heap", "HashMap"], tip: "Max-heap by frequency. Alternate chars to avoid adjacent." },
+        { id: "82", name: "Task Scheduler", diff: "Medium", ds: ["Heap"], tip: "Max-heap for task frequency. Greedy scheduling." },
+        { id: "83", name: "Design Twitter", diff: "Medium", ds: ["Heap", "HashMap"], tip: "HashMap for follow graph, heap for timeline merge." },
+        { id: "84", name: "Find Median from Data Stream", diff: "Hard", ds: ["Heap"], tip: "Max-heap for small half, min-heap for large half." },
+      ]
+    },
+    {
+      id: "greedy",
+      label: "Greedy",
+      icon: "🎯",
+      iconBg: "rgba(34,211,238,0.18)",
+      problems: [
+        { id: "85", name: "Jump Game", diff: "Medium", ds: ["Greedy"], tip: "Track max reachable index. Greedy jump to farthest." },
+        { id: "86", name: "Jump Game II", diff: "Medium", ds: ["Greedy"], tip: "Track current end and farthest reachable, jump when needed." },
+        { id: "87", name: "Gas Station", diff: "Medium", ds: ["Greedy"], tip: "Start from negative balance, try each station." },
+        { id: "88", name: "Hand of Straights", diff: "Medium", ds: ["Greedy", "HashMap"], tip: "Sort, form consecutive groups greedily." },
+        { id: "89", name: "Merge Triplets to Form Target Triplet", diff: "Medium", ds: ["Greedy"], tip: "Filter valid triplets, check if OR equals target." },
+        { id: "90", name: "Partition Labels", diff: "Medium", ds: ["Greedy", "HashMap"], tip: "Track last index of each char, partition greedily." },
+        { id: "91", name: "Valid Parenthesis String", diff: "Medium", ds: ["Greedy"], tip: "Track min/max possible open count." },
+      ]
+    },
+    {
+      id: "intervals",
+      label: "Intervals",
+      icon: "📊",
+      iconBg: "rgba(163,230,53,0.18)",
+      problems: [
+        { id: "92", name: "Insert Interval", diff: "Medium", ds: ["Array"], tip: "Add non-overlapping, merge overlapping." },
+        { id: "93", name: "Merge Intervals", diff: "Medium", ds: ["Array"], tip: "Sort by start, merge overlapping intervals." },
+        { id: "94", name: "Non-overlapping Intervals", diff: "Medium", ds: ["Greedy"], tip: "Sort by end, greedily select non-overlapping." },
+        { id: "95", name: "Meeting Rooms", diff: "Easy", ds: ["Array"], tip: "Sort and check for overlaps." },
+        { id: "96", name: "Meeting Rooms II", diff: "Medium", ds: ["Heap"], tip: "Min-heap of end times, track max concurrent." },
+      ]
+    },
+    {
+      id: "math-geometry",
+      label: "Math & Geometry",
+      icon: "🔢",
+      iconBg: "rgba(168,85,247,0.18)",
+      problems: [
+        { id: "97", name: "Rotate Array", diff: "Easy", ds: ["Array"], tip: "Reverse segments: reverse all, then k and n-k." },
+        { id: "98", name: "Plus One", diff: "Easy", ds: ["Array"], tip: "Add from end, handle carry." },
+        { id: "99", name: "Pow(x, n)", diff: "Medium", ds: ["Math"], tip: "Fast exponentiation with recursion." },
+        { id: "100", name: "Multiply Strings", diff: "Medium", ds: ["String"], tip: "Digit by digit multiplication, handle carries." },
+        { id: "101", name: "Set Matrix Zeroes", diff: "Medium", ds: ["Array"], tip: "Use first row/col as markers, handle edge case." },
+        { id: "102", name: "Happy Number", diff: "Easy", ds: ["Cycle Detection"], tip: "HashSet to detect cycle in sum-of-squares sequence." },
+        { id: "103", name: "Majority Element", diff: "Easy", ds: ["Array"], tip: "Boyer-Moore voting algorithm." },
+        { id: "104", name: "Majority Element II", diff: "Medium", ds: ["HashMap"], tip: "At most 2 elements appear >n/3 times." },
+        { id: "105", name: "Rotate Image", diff: "Medium", ds: ["Array"], tip: "Transpose then reverse each row." },
+        { id: "106", name: "Spiral Matrix", diff: "Medium", ds: ["Array"], tip: "Shrink boundaries as you spiral." },
+      ]
+    },
+    {
+      id: "bit-manipulation",
+      label: "Bit Manipulation",
+      icon: "🔗",
+      iconBg: "rgba(251,146,60,0.18)",
+      problems: [
+        { id: "107", name: "Add Two Integers Without +/-", diff: "Easy", ds: ["Bit Manipulation"], tip: "XOR for sum, AND<<1 for carry." },
+        { id: "108", name: "Number of 1 Bits", diff: "Easy", ds: ["Bit Manipulation"], tip: "n & (n-1) removes rightmost 1 bit." },
+        { id: "109", name: "Single Number", diff: "Easy", ds: ["Bit Manipulation"], tip: "XOR all elements, pairs cancel out." },
+        { id: "110", name: "Single Number II", diff: "Medium", ds: ["Bit Manipulation"], tip: "Count bit positions modulo 3." },
+        { id: "111", name: "Reverse Bits", diff: "Easy", ds: ["Bit Manipulation"], tip: "Extract rightmost bit, build result." },
+        { id: "112", name: "Missing Number", diff: "Easy", ds: ["Bit Manipulation"], tip: "XOR all nums and all indices." },
+      ]
+    },
+    {
+      id: "dynamic-programming",
+      label: "Dynamic Programming",
+      icon: "🧠",
+      iconBg: "rgba(139,124,248,0.18)",
+      problems: [
+        { id: "113", name: "Climbing Stairs", diff: "Easy", ds: ["DP"], tip: "dp[i] = dp[i-1] + dp[i-2]." },
+        { id: "114", name: "House Robber", diff: "Medium", ds: ["DP"], tip: "dp[i] = max(dp[i-1], dp[i-2]+val)." },
+        { id: "115", name: "House Robber II", diff: "Medium", ds: ["DP"], tip: "Two scenarios: exclude first or last house." },
+        { id: "116", name: "Coin Change", diff: "Medium", ds: ["DP"], tip: "dp[amount] = min coins needed." },
+        { id: "117", name: "Longest Increasing Subsequence", diff: "Medium", ds: ["DP"], tip: "dp[i] = longest ending at i." },
+        { id: "118", name: "Longest Common Subsequence", diff: "Medium", ds: ["DP"], tip: "2D DP on two strings." },
+        { id: "119", name: "Word Break", diff: "Medium", ds: ["DP"], tip: "dp[i] = can form word[:i] from dict." },
+        { id: "120", name: "Combination Sum IV", diff: "Medium", ds: ["DP"], tip: "dp[target] = ways to sum to target." },
+        { id: "121", name: "Delete and Earn", diff: "Medium", ds: ["DP"], tip: "Similar to House Robber on value array." },
+        { id: "122", name: "Jump Game IV", diff: "Hard", ds: ["Graph", "BFS"], tip: "BFS to find shortest path." },
+        { id: "123", name: "Palindromic Substrings", diff: "Medium", ds: ["DP"], tip: "Expand around center or 2D DP." },
+        { id: "124", name: "Distinct Subsequences", diff: "Hard", ds: ["DP"], tip: "dp[i][j] = distinct subsequences of s[:i] in t[:j]." },
+      ]
+    },
+    {
+      id: "2d-dp",
+      label: "2D Dynamic Programming",
+      icon: "🎲",
+      iconBg: "rgba(34,211,238,0.18)",
+      problems: [
+        { id: "125", name: "Unique Paths", diff: "Medium", ds: ["DP"], tip: "dp[i][j] = dp[i-1][j] + dp[i][j-1]." },
+        { id: "126", name: "Unique Paths II", diff: "Medium", ds: ["DP"], tip: "Handle obstacles, set dp[i][j] = 0." },
+        { id: "127", name: "Longest Palindromic Substring", diff: "Medium", ds: ["DP"], tip: "Expand around center or 2D DP." },
+        { id: "128", name: "Interleaving String", diff: "Medium", ds: ["DP"], tip: "dp[i][j] = can form s3[:i+j] from s1[:i] and s2[:j]." },
+        { id: "129", name: "Edit Distance", diff: "Hard", ds: ["DP"], tip: "Insert/delete/replace operations, min transformations." },
+        { id: "130", name: "Maximum Path Sum in Matrix", diff: "Hard", ds: ["DP"], tip: "dp[i][j] = max sum path to (i,j)." },
+      ]
+    },
+    {
+      id: "greedy-dp",
+      label: "Stock Trading",
+      icon: "📈",
+      iconBg: "rgba(34,197,94,0.18)",
+      problems: [
+        { id: "131", name: "Best Time to Buy and Sell Stock", diff: "Easy", ds: ["Array"], tip: "Track min price, update max profit." },
+        { id: "132", name: "Best Time to Buy and Sell Stock II", diff: "Medium", ds: ["Greedy"], tip: "Capture all upward moves." },
+        { id: "133", name: "Best Time to Buy and Sell Stock III", diff: "Hard", ds: ["DP"], tip: "At most 2 transactions." },
+        { id: "134", name: "Best Time to Buy and Sell Stock IV", diff: "Hard", ds: ["DP"], tip: "At most k transactions." },
+        { id: "135", name: "Best Time to Buy and Sell Stock with Cooldown", diff: "Medium", ds: ["DP"], tip: "States: hold, sold (cooldown), rest." },
+        { id: "136", name: "Best Time to Buy and Sell Stock with Transaction Fee", diff: "Medium", ds: ["DP"], tip: "Hold/sell states with fee consideration." },
+      ]
+    },
+    {
+      id: "string",
+      label: "String",
+      icon: "📝",
+      iconBg: "rgba(244,114,182,0.18)",
+      problems: [
+        { id: "137", name: "Longest Substring Without Repeating Characters", diff: "Medium", ds: ["String", "Sliding Window"], tip: "Sliding window with char→index map." },
+        { id: "138", name: "Longest Repeating Character Replacement", diff: "Medium", ds: ["String"], tip: "Sliding window, max frequency tracking." },
+        { id: "139", name: "Minimum Window Substring", diff: "Hard", ds: ["String", "Sliding Window"], tip: "Expand/shrink window to find minimum." },
+        { id: "140", name: "Valid Parentheses", diff: "Easy", ds: ["String", "Stack"], tip: "Match pairs with stack." },
+        { id: "141", name: "Generate Parentheses", diff: "Medium", ds: ["String", "Backtracking"], tip: "Backtracking with open/close limits." },
+        { id: "142", name: "Wildcard Matching", diff: "Hard", ds: ["String", "DP"], tip: "2D DP or two pointers with greedy." },
+        { id: "143", name: "Regular Expression Matching", diff: "Hard", ds: ["String", "DP"], tip: "2D DP with state matching." },
+        { id: "144", name: "Word Search", diff: "Medium", ds: ["String", "Backtracking"], tip: "DFS with backtracking on grid." },
+        { id: "145", name: "Scramble String", diff: "Hard", ds: ["String", "DP"], tip: "Recursion with memoization on substrings." },
+      ]
+    },
+    {
+      id: "advanced",
+      label: "Advanced",
+      icon: "⚡",
+      iconBg: "rgba(251,146,60,0.18)",
+      problems: [
+        { id: "146", name: "Median of Two Sorted Arrays", diff: "Hard", ds: ["Array"], tip: "Binary search on partition." },
+        { id: "147", name: "Largest Rectangle in Histogram", diff: "Hard", ds: ["Stack"], tip: "Monotonic stack of indices." },
+        { id: "148", name: "Trapping Rain Water", diff: "Hard", ds: ["Array", "Two Pointers"], tip: "Left/right max with pointers." },
+        { id: "149", name: "N-Queens", diff: "Hard", ds: ["Backtracking"], tip: "DFS with constraint tracking." },
+        { id: "150", name: "Serialize and Deserialize Binary Tree", diff: "Hard", ds: ["Tree"], tip: "Level-order with null markers." },
+      ]
+    },
+  ];
+
+  const DIFF_ORDER = { Easy: 0, Medium: 1, Hard: 2 };
+
+  let activeTopic = "all";
+  let activeDiff = "all";
+  let activeStatus = "all";
+  let searchQ = "";
+  let completedProblems = new Set();
+
+  // ── Load progress from localStorage ──
+  function loadProgress() {
+    const saved = localStorage.getItem('neetcode150-progress');
+    if (saved) {
+      try {
+        completedProblems = new Set(JSON.parse(saved));
+      } catch (e) {
+        completedProblems = new Set();
+      }
+    }
+  }
+
+  // ── Save progress to localStorage ──
+  function saveProgress() {
+    localStorage.setItem('neetcode150-progress', JSON.stringify([...completedProblems]));
+    updateStats();
+  }
+
+  // ── Toggle problem completion ──
+  function toggleProblem(problemId) {
+    if (completedProblems.has(problemId)) {
+      completedProblems.delete(problemId);
+    } else {
+      completedProblems.add(problemId);
+    }
+    saveProgress();
+    render();
+  }
+
+  // ── Update statistics ──
+  function updateStats() {
+    const allProblems = NEETCODE_150.flatMap(t => t.problems);
+    const total = allProblems.length;
+    const completed = completedProblems.size;
+    const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+    const easyCompleted = allProblems.filter(p => p.diff === "Easy" && completedProblems.has(p.id)).length;
+    const easyTotal = allProblems.filter(p => p.diff === "Easy").length;
+    const medCompleted = allProblems.filter(p => p.diff === "Medium" && completedProblems.has(p.id)).length;
+    const medTotal = allProblems.filter(p => p.diff === "Medium").length;
+    const hardCompleted = allProblems.filter(p => p.diff === "Hard" && completedProblems.has(p.id)).length;
+    const hardTotal = allProblems.filter(p => p.diff === "Hard").length;
+
+    document.getElementById('total-completed').textContent = completed;
+    document.getElementById('total-problems').textContent = total;
+    document.getElementById('completion-percentage').textContent = percentage + '%';
+    document.getElementById('progress-bar-main').style.width = percentage + '%';
+
+    document.getElementById('easy-completed').textContent = easyCompleted + ' / ' + easyTotal;
+    document.getElementById('med-completed').textContent = medCompleted + ' / ' + medTotal;
+    document.getElementById('hard-completed').textContent = hardCompleted + ' / ' + hardTotal;
+  }
+
+  // ── Filter logic ──
+  function matchesProblem(p) {
+    const isCompleted = completedProblems.has(p.id);
+    const topicOk = activeTopic === "all" || true; // handled by section filter
+    const diffOk = activeDiff === "all" || p.diff === activeDiff;
+    const statusOk = activeStatus === "all" || (activeStatus === "completed" ? isCompleted : !isCompleted);
+    const sqOk = !searchQ || p.name.toLowerCase().includes(searchQ) || p.tip.toLowerCase().includes(searchQ);
+    return diffOk && statusOk && sqOk;
+  }
+
+  // ── Render main content ──
+  function render() {
+    const container = document.getElementById('main-content');
+    let totalVisible = 0;
+
+    const html = NEETCODE_150
+      .filter(t => activeTopic === "all" || t.id === activeTopic)
+      .map(topic => {
+        const filtered = topic.problems.filter(matchesProblem);
+        if (!filtered.length) return '';
+
+        const byDiff = { Easy: [], Medium: [], Hard: [] };
+        filtered.forEach(p => byDiff[p.diff].push(p));
+
+        const diffGroups = ['Easy', 'Medium', 'Hard'].map(diff => {
+          const probs = byDiff[diff];
+          if (!probs.length) return '';
+          const cls = diff.toLowerCase();
+          const cards = probs.map(p => {
+            const isCompleted = completedProblems.has(p.id);
+            const dsBadgesHtml = p.ds.map(ds => {
+              const color = DS_COLOR[ds] || "#94a3b8";
+              const bg = color + "22";
+              return `<span class="badge" style="background:${bg};color:${color};border-radius:100px">${ds}</span>`;
+            }).join('');
+            const diffBadgeHtml = `<span class="badge ${diff === "Hard" ? "badge-hard" : diff === "Medium" ? "badge-med" : "badge-easy"}">${diff}</span>`;
+
+            return `
+              <div class="card ${isCompleted ? 'completed' : ''}">
+                <div class="card-checkbox-wrapper">
+                  <input type="checkbox" class="card-checkbox" ${isCompleted ? 'checked' : ''} onchange="toggleProblem('${p.id}')">
+                  <div class="card-content">
+                    <div class="card-name">${p.name}</div>
+                    <div class="card-meta">${diffBadgeHtml} ${dsBadgesHtml}</div>
+                    <div class="card-tip">${p.tip}</div>
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('');
+          return `
+            <div class="diff-group">
+              <div class="diff-group-label ${cls}">${diff}</div>
+              <div class="cards-grid">${cards}</div>
+            </div>
+          `;
+        }).join('');
+
+        totalVisible += filtered.length;
+
+        return `
+          <div class="topic-section" id="sec-${topic.id}">
+            <div class="topic-header">
+              <div class="topic-icon" style="background:${topic.iconBg}">${topic.icon}</div>
+              <div class="topic-title">${topic.label}</div>
+              <div class="topic-count">${filtered.length} problems</div>
+            </div>
+            ${diffGroups}
+          </div>
+        `;
+      }).join('');
+
+    container.innerHTML = html;
+    document.getElementById('no-result').style.display = totalVisible === 0 ? 'block' : 'none';
+  }
+
+  // ── Render topic filters ──
+  function renderTopicFilters() {
+    const bar = document.getElementById('topic-filters');
+    const opts = [{ id: "all", label: "All topics" }, ...NEETCODE_150.map(t => ({ id: t.id, label: t.label }))];
+    bar.innerHTML = opts.map(o =>
+      `<button class="filter-btn ${activeTopic === o.id ? 'active' : ''}" onclick="setTopic('${o.id}')">${o.label}</button>`
+    ).join('');
+  }
+
+  function setTopic(id) {
+    activeTopic = id;
+    renderTopicFilters();
+    render();
+  }
+
+  // ── Render difficulty filters ──
+  function renderDiffFilters() {
+    const bar = document.getElementById('diff-filters');
+    const opts = [
+      { v: "all", label: "All", cls: "" },
+      { v: "Easy", label: "Easy", cls: "active-easy" },
+      { v: "Medium", label: "Medium", cls: "active-med" },
+      { v: "Hard", label: "Hard", cls: "active-hard" },
+    ];
+    bar.innerHTML = opts.map(o =>
+      `<button class="filter-btn diff-btn ${activeDiff === o.v ? o.cls : ''}" onclick="setDiff('${o.v}')">${o.label}</button>`
+    ).join('');
+  }
+
+  function setDiff(d) {
+    activeDiff = d;
+    renderDiffFilters();
+    render();
+  }
+
+  // ── Render status filters ──
+  function renderStatusFilters() {
+    const bar = document.getElementById('status-filters');
+    bar.innerHTML = [
+      `<button class="filter-btn ${activeStatus === 'all' ? 'active' : ''}" onclick="setStatus('all')">All</button>`,
+      `<button class="filter-btn ${activeStatus === 'completed' ? 'active' : ''}" onclick="setStatus('completed')">✅ Completed</button>`,
+      `<button class="filter-btn ${activeStatus === 'pending' ? 'active' : ''}" onclick="setStatus('pending')">⏳ Pending</button>`,
+    ].join('');
+  }
+
+  function setStatus(status) {
+    activeStatus = status;
+    renderStatusFilters();
+    render();
+  }
+
+  // ── Search ──
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search');
+    if (searchInput) {
+      searchInput.addEventListener('input', function() {
+        searchQ = this.value.trim().toLowerCase();
+        render();
+      });
+    }
+  });
+
+  // ── Export progress ──
+  function exportProgress() {
+    const allProblems = NEETCODE_150.flatMap(t => t.problems);
+    const report = allProblems.map(p => {
+      const status = completedProblems.has(p.id) ? '✅' : '❌';
+      return `${status} ${p.name} (${p.diff})`;
+    }).join('\n');
+
+    const stats = `NeetCode 150 Progress Report\n${new Date().toLocaleString()}\n\nCompleted: ${completedProblems.size} / ${allProblems.length}\n\n${report}`;
+    const blob = new Blob([stats], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'neetcode150-progress.txt';
+    a.click();
+  }
+
+  // ── Save progress to URL (Base64 encoded) ──
+  function saveToURL() {
+    const progressArray = [...completedProblems];
+    const encoded = btoa(JSON.stringify(progressArray)); // Base64 encode
+    const url = new URL(window.location.href);
+    url.hash = 'progress=' + encoded;
+    
+    // Copy to clipboard
+    const fullUrl = url.toString();
+    navigator.clipboard.writeText(fullUrl).then(() => {
+      alert('✅ Progress URL copied to clipboard!\n\nYou can:\n1. Bookmark this URL\n2. Save it as a backup\n3. Share it on different devices\n4. Paste it anywhere safe');
+    }).catch(() => {
+      prompt('Copy this URL (Ctrl+C / Cmd+C):', fullUrl);
+    });
+  }
+
+  // ── Load progress from URL ──
+  function loadFromURL() {
+    const hash = window.location.hash;
+    const match = hash.match(/progress=([^&]+)/);
+    
+    if (!match) {
+      alert('❌ No progress data found in URL.\n\nTo load progress:\n1. Paste a URL with progress data\n2. Or use "Save to URL" to create one');
+      return;
+    }
+
+    try {
+      const encoded = match[1];
+      const progressArray = JSON.parse(atob(encoded)); // Decode Base64
+      completedProblems = new Set(progressArray);
+      saveProgress();
+      render();
+      alert('✅ Progress loaded successfully! ' + completedProblems.size + ' problems restored.');
+    } catch (e) {
+      alert('❌ Invalid progress data in URL. Please check and try again.');
+    }
+  }
+
+  // ── Auto-load from URL on page load ──
+  function autoLoadFromURL() {
+    const hash = window.location.hash;
+    const match = hash.match(/progress=([^&]+)/);
+    
+    if (match) {
+      try {
+        const encoded = match[1];
+        const progressArray = JSON.parse(atob(encoded));
+        completedProblems = new Set(progressArray);
+        localStorage.setItem('neetcode150-progress', JSON.stringify([...completedProblems]));
+      } catch (e) {
+        console.log('Could not load from URL');
+      }
+    }
+  }
+
+  // ── Reset progress ──
+  function resetProgress() {
+    if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
+      completedProblems.clear();
+      saveProgress();
+      render();
+    }
+  }
+
+  // ── Init ──
+  autoLoadFromURL();
+  loadProgress();
+  renderTopicFilters();
+  renderDiffFilters();
+  renderStatusFilters();
+  updateStats();
+  render();
+</script>
+</body>
+</html>
