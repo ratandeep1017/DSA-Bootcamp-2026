@@ -93,8 +93,7 @@ This repository is designed for:
 - [ ] Merge two sorted lists
 - [ ] Find middle node
 - [ ] Check palindrome
-- [ ] Remove duplicates (sorted list)
-- [ ] Remove duplicates (unsorted list)
+- [ ] Remove duplicates (sorted list) - (unsorted list)
 - [ ] Remove every k-th node
 - [ ] Reverse linked list
 - [ ] Update value in DLL
