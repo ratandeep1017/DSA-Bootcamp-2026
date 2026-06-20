@@ -1,4 +1,4 @@
-package CharacterStringDSA;
+
 public class checkCharacterTypes{
     public static String check(char ch) {
         if (Character.isUpperCase(ch)) return "Uppercase";
