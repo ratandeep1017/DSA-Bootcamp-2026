@@ -21,9 +21,13 @@ public class ReverseArray {
         // }
         
         // !we can use for loop instead of while loop in this way
-        // for (int l= left, r= right; left < right; left++, right--)
-        // int temp = arr[l]; arr[l] = arr[r]; arr[r] = temp;
+        // for (int l= left, r= right; left < right; left++, right--){
+        //      int temp = arr[l]; 
+        //      arr[l] = arr[r]; 
+        //      arr[r] = temp;
+        // } 
         
         for (int x : arr) System.out.print(x + " ");
     }
 }
+  
