@@ -171,11 +171,11 @@ Instead of solving randomly:
 - [x] Two sum and a target
 
 ## 5. Arrays – Subarrays, Sliding Window, Prefix Sum
+- [x] Left/Right Rotate an Array by K Places 
 - [ ] Find the Maximum Consecutive 1's in a Binary Array  
 - [ ] Find the Majority Element in an Array  
 - [ ] Find the Maximum Subarray Sum (Kadane)
 - [ ] Find the Maximum Difference 
-- [ ] Left Rotate an Array by D Places 
 - [ ] Find the Maximum or Minimum Sum of a Subarray of Size K
 - [ ] Find a **Subarray** With a Given Sum Using the **Sliding Window** Technique  
 - [ ] Find the Maximum Length **Even-Odd Subarray**  
