@@ -9,7 +9,6 @@ public class LeftRightRotateArrayList {
         int n = arr.size();
         if (n == 0) return;
         k %= n;
-
         Collections.reverse(arr.subList(0, k));
         Collections.reverse(arr.subList(k, n));
         Collections.reverse(arr);
@@ -20,7 +19,6 @@ public class LeftRightRotateArrayList {
         int n = arr.size();
         if (n == 0) return;
         k %= n;
-
         Collections.reverse(arr);
         Collections.reverse(arr.subList(0, k));
         Collections.reverse(arr.subList(k, n));
