@@ -1,4 +1,3 @@
-package CharacterStringDSA;
 import java.util.ArrayList;
 
 public class ReverseString {
