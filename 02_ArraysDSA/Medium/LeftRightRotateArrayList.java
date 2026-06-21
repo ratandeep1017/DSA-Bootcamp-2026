@@ -31,7 +31,7 @@ public class LeftRightRotateArrayList {
         // ArrayList<Integer> arr1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
         int k1 = 2;
         leftRotate(arr1, k1);
-        System.out.println(arr1); // Expected: 3 4 5 1 2
+        System.out.println(arr1); // Expected: 3 4 5                                                                                                                                           1 2
 
         //->  Test Case 2: Right rotation
         ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
