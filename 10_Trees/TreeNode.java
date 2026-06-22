@@ -47,19 +47,22 @@ class Solution {
 }
 
 // !ANOTHER BETTER APPROACH
-// ---------------------------
+//!---------------------------------
 // class Solution {
 //     public List<List<Integer>> levelOrder(TreeNode root) {
-//         List<List<Integer>> result = new ArrayList<>();
-//         traverse(root,0,result);
-//         return result;
+//         List<List<Integer>> result = new ArrayList<>(); //*This will store final answer: each inner list = one level of tree
+//         traverse(root, 0, result); //*Start traversal from root at level 0
+//         return result; //*Return the level order traversal result
 //     }
-//     private void traverse(TreeNode node,int level,List<List<Integer>> result){
-//         if(node==null) return;
-//         if(result.size()==level) result.add(new ArrayList<>());
+//---------------------------------------------------------------------------------
+//     private void traverse(TreeNode node, int level, List<List<Integer>> result) {
+//         if (node == null) return; //*Base case: if node is null, just return (nothing to process)
 
-//         result.get(level).add(node.val);
-//         traverse(node.left,level+1,result);
-//         traverse(node.right,level+1,result);
+//         *If we are visiting this level for the first time, create a new list for this level
+//         if (result.size() == level) result.add(new ArrayList<>());
+
+//         result.get(level).add(node.val); //*Add current node value to its corresponding level list
+//         traverse(node.left, level + 1, result); // *Recursively process left child, increase level by 1
+//         traverse(node.right, level + 1, result); // *Recursively process right child, increase level by 1
 //     }
 // }
