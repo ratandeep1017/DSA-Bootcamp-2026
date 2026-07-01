@@ -1,5 +1,4 @@
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Spliterator;
 
 public class HashSetAllMethods {
@@ -40,7 +39,8 @@ public class HashSetAllMethods {
         HashSet<Integer> checkSet = new HashSet<>();
         checkSet.add(10);
         checkSet.add(30);
-        System.out.println("containsAll(checkSet): " + set.containsAll(checkSet)); // Retrun true or false if set contains another set
+        // Retrun true or false if set contains another set
+        System.out.println("containsAll(checkSet): " + set.containsAll(checkSet)); 
         System.out.println("------------------------------------------------");
 
         //!size()
@@ -108,7 +108,6 @@ public class HashSetAllMethods {
 
         //!isEmpty() after clear
         // System.out.println("isEmpty() after clear: " + set.isEmpty());
-
 
         //!clone()
         HashSet<Integer> clonedSet = (HashSet<Integer>) set.clone();
