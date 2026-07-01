@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.Collections;
+
 
 public class ListMethods {
     public static void main(String[] args) {
@@ -12,6 +14,9 @@ public class ListMethods {
         list.add("C++");
         list.add("Python");
         System.out.println("After add: " + list);
+        
+        //Sort List
+        Collections.sort(list);
 
         //! add(int index, E element)
         list.add(1, "SQL");
@@ -55,7 +60,7 @@ public class ListMethods {
 
         //! indexOf(Object o)
         System.out.println("Index of Java: " + list.indexOf("Java"));
-
+	
         //! lastIndexOf(Object o)
         list.add("Java");
         System.out.println("Last index of Java: " + list.lastIndexOf("Java"));
@@ -78,7 +83,6 @@ public class ListMethods {
         //! list → array
         int[] newArr = new int[numlist.size()];
         for (int i = 0; i < numlist.size(); i++) newArr[i] = numlist.get(i);
-        
 
         //! subList(int from, int to)
         List<String> sub = list.subList(0, 2);
@@ -92,7 +96,9 @@ public class ListMethods {
         System.out.print("Using forEach: ");
         list.forEach(x -> System.out.print(x + " "));
         System.out.println();
-
+        
+        for (String item : list) System.out.println(item);
+        
         //! clear()
         list.clear();
         System.out.println("After clear: " + list);
