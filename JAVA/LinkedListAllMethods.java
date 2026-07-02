@@ -30,8 +30,7 @@ public class LinkedListAllMethods {
 
         //! addAll(Collection<? extends E> c)
         LinkedList<String> otherList = new LinkedList<>();
-        otherList.add("HTML");
-        otherList.add("CSS");
+        otherList.add("HTML"); otherList.add("CSS");
         list.addAll(otherList);
         printList("After addAll()", list);
 
@@ -115,9 +114,7 @@ public class LinkedListAllMethods {
         printList("After removeAll()", list);
 
         //! removeIf(Predicate p)
-        list.add("A");
-        list.add("B");
-        list.add("A");
+        list.add("A"); list.add("B"); list.add("A");
         printList("Before removeIf()", list);
         list.removeIf(x -> x.equals("A"));
         printList("After removeIf(x -> x.equals(\"A\"))", list);
