@@ -15,7 +15,7 @@ public class QueueDemo {
 
         // element / peek
         System.out.println("element(): " + queue.element()); // 10
-        System.out.println("peek(): " + queue.peek());       // 10
+        System.out.println("peek(): " + queue.peek()); // 10
 
         // contains
         System.out.println("contains(20): " + queue.contains(20)); // true
@@ -29,7 +29,7 @@ public class QueueDemo {
 
         // poll
         System.out.println("poll(): " + queue.poll()); // 10
-        System.out.println("After poll: " + queue);    // [30]
+        System.out.println("After poll: " + queue); // [30]
 
         // isEmpty
         System.out.println("isEmpty(): " + queue.isEmpty()); // false
@@ -44,7 +44,7 @@ public class QueueDemo {
 
         // remove() — throws exception if empty
         System.out.println("remove(): " + queue.remove()); // 30
-        System.out.println("After remove(): " + queue);    // []
+        System.out.println("After remove(): " + queue); // []
 
         // poll on empty queue — returns null, no exception
         System.out.println("poll() on empty: " + queue.poll()); // null

@@ -1,4 +1,4 @@
-public import java.util.Stack;
+import java.util.Stack;
 
 public class StackDemo {
 
@@ -29,21 +29,19 @@ public class StackDemo {
 
         // firstElement / lastElement
         System.out.println("firstElement(): " + stack.firstElement()); // 10
-        System.out.println("lastElement(): " + stack.lastElement());   // 30
+        System.out.println("lastElement(): " + stack.lastElement()); // 30
 
         // isEmpty / empty
         System.out.println("isEmpty(): " + stack.isEmpty()); // false
-        System.out.println("empty(): " + stack.empty());     // false
+        System.out.println("empty(): " + stack.empty()); // false
 
         // pop
         System.out.println("pop(): " + stack.pop()); // 30
-        System.out.println("After pop: " + stack);   // [10, 20]
+        System.out.println("After pop: " + stack); // [10, 20]
 
         // clear
         stack.clear();
-        System.out.println("After clear(): " + stack);       // []
+        System.out.println("After clear(): " + stack); // []
         System.out.println("empty() after clear: " + stack.empty()); // true
     }
-} {
-    
 }
