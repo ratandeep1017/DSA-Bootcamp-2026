@@ -73,7 +73,7 @@ class MyStack {
         System.out.println("Stack cleared");
     }
 }
-
+//!--------------------------------------------------------------------------
 public class MyStackSelf {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
