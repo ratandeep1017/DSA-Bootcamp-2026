@@ -1,4 +1,4 @@
-public class MyStack {
+class MyStack {
     int[] arr;
     int top;
     int capacity;
@@ -17,13 +17,15 @@ public class MyStack {
         return top == -1;
     }
 
+    int size() {
+        return top + 1;
+    }
     void push(int value) {
         if (isOverflow()) {
             System.out.println("Stack Overflow");
             return;
         }
-        top++;
-        arr[top] = value;
+        arr[++top] = value;
         System.out.println(value + " pushed into stack");
     }
 
@@ -32,9 +34,7 @@ public class MyStack {
             System.out.println("Stack Underflow");
             return -1;
         }
-        int value = arr[top];
-        top--;
-        return value;
+        return arr[top--];
     }
 
     int peek() {
@@ -45,24 +45,10 @@ public class MyStack {
         return arr[top];
     }
 
-    boolean isEmpty() {
-        return top == -1;
-    }
-
-    boolean isFull() {
-        return top == capacity - 1;
-    }
-
-    int size() {
-        return top + 1;
-    }
-
     int search(int value) {
         int position = 1;
         for (int i = top; i >= 0; i--) {
-            if (arr[i] == value) {
-                return position;
-            }
+            if (arr[i] == value) return position;
             position++;
         }
         return -1;
@@ -73,11 +59,9 @@ public class MyStack {
             System.out.println("Stack is empty");
             return;
         }
-        System.out.print("Stack elements: ");
-        for (int i = 0; i <= top; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
+        System.out.println("Stack elements: ");
+        for (int i = top; i >= 0; i--) 
+            System.out.println("[" + arr[i] + "] ");
     }
 
     void clear() {
@@ -86,7 +70,7 @@ public class MyStack {
     }
 }
 
-public class StackDemo {
+public class MyStackSelf {
     public static void main(String[] args) {
         MyStack stack = new MyStack(5);
 
@@ -99,12 +83,10 @@ public class StackDemo {
         System.out.println("Popped element: " + stack.pop());
         stack.display();
 
-        System.out.println("Is stack empty? " + stack.isEmpty());
-        System.out.println("Is stack full? " + stack.isFull());
-        System.out.println("Overflow check: " + stack.isOverflow());
-        System.out.println("Underflow check: " + stack.isUnderflow());
-        System.out.println("Size of stack: " + stack.size());
-        System.out.println("Search 10 from top: " + stack.search(10));
+        System.out.println("Overflow check / Is stack full -> " + stack.isOverflow());
+        System.out.println("Underflow check / Is stack empty -> " + stack.isUnderflow());
+        System.out.println("Size of stack -> " + stack.size());
+        System.out.println("Search 10 from top -> " + stack.search(10));
 
         stack.clear();
         stack.display();
