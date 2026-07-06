@@ -46,6 +46,8 @@ This repository is designed for:
 - [ ] Dutch National Flag (0s, 1s, 2s)
 - [ ] Trapping Rainwater
 - [ ] Container With Most Water
+- [ ] Count negatives
+
 
 ## Matrix
 - [ ] Maximum sum row in matrix (and discard it)
