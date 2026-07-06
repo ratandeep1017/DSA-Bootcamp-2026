@@ -1,4 +1,4 @@
-public class Solution {
+public class LengthOfLastWords {
     public static int lengthOfLastWord(String s) {
         String[] parts = s.trim().split("\\s+");
         // String[] parts = s.split(" ");
