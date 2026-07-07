@@ -1,4 +1,4 @@
-package CharacterStringDSA;
+
 import java.util.ArrayList;
 public class DigitsInArrayList {
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class DigitsInArrayList {
         if (n < 0) n = -n;
         if (n == 0) digits.add(0);
         else {
-            while (n > 0) {
+            while (n != 0) {
                 int d = n % 10;
                 sum += d;
                 digits.add(0, d);
