@@ -8,7 +8,6 @@ public class AddingOne {
             arr[n] = 0;
             arr[n - 1]++;
         }
-        for (int e : arr) System.out.print(e + " ");
+        for (int e : arr) System.out.print(e);
     }
 }
-3499
