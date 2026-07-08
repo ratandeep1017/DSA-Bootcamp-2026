@@ -1,4 +1,3 @@
-package CharacterStringDSA;
 import java.util.*;
 
 public class SortUniqueStringList {
