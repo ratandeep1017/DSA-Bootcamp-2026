@@ -40,6 +40,7 @@ public class SecondMaxMin {
                 secMin = ele;
         }
 
+        
         System.out.println("Max = " + max + ", Second Max = " + secMax);
         System.out.println("Min = " + min + ", Second Min = " + secMin);
 
