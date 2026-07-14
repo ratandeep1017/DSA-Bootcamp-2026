@@ -16,8 +16,8 @@ public class MergeSort {
         int n1 = left.length;
         int n2 = right.length;
         while (i < n1 && j < n2) 
-            if (left[i] <= right[j]) arr[k++] = left[i++];
-            else arr[k++] = right[j++];
+            arr[k++] = (left[i] <= right[j]) ? left[i++] : right[j++];
+
         while (i < n1) arr[k++] = left[i++];
         while (j < n2) arr[k++] = right[j++];
     }
