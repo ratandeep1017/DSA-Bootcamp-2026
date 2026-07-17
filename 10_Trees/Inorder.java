@@ -4,9 +4,8 @@ public class Inorder {
     public List<Integer> inorder(TreeNode root) {
         if (root == null) return result;
         inorder(root.left);
-        result.add(root.val); // System.out.print(root.val + " ");
+        result.add(root.val); // System.out.print(root.val + " "); // 4 2 5 1 3
         inorder(root.right);
         return result;
     }
 }
-// 4 2 5 1 3
