@@ -13,6 +13,7 @@ class MyLinkedList {
     private class Node {
         int val; // value stored in node
         Node next; // reference to next node
+
         Node(int val) {
             this.val = val;
             this.next = null;
@@ -35,6 +36,7 @@ class MyLinkedList {
         head = newNode; // Update head to new node
         size++; // Increase size
     }
+
     // Add a node of value 'val' at the tail (end)
     public void addAtTail(int val) {
         // If list is empty, adding at tail is same as adding at head
@@ -49,6 +51,18 @@ class MyLinkedList {
         // Last node's next should point to new node
         current.next = newNode;
         size++; // Increase size
+    }
+
+    // Get value at given index (0-based) and If index is invalid, return -1
+    public void get(int index) {
+        if (index < 0 || index >= size) {
+            System.out.println("Index out of Range");
+            return;
+        }
+        Node current = head;
+        for (int i = 0; i < index; i++)
+            current = current.next;
+        System.out.println("Value at Index " + index + " is: " + current.val);
     }
 
     public void display() {
@@ -67,6 +81,9 @@ class MyLinkedList {
 
         list.addAtTail(5);
         list.addAtTail(6);
+        list.addAtTail(6);
+        list.addAtTail(6);
+        list.addAtTail(6);
         list.addAtTail(7);
         list.display();
 
@@ -74,7 +91,7 @@ class MyLinkedList {
         list.addAtTail(9);
         list.display();
 
-
-
+        list.get(4);
+        list.get(32);
     }
 }
